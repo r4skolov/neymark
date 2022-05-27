@@ -1,0 +1,15 @@
+:root {
+    // base
+    --font-family: "Nunito", sans-serif;
+    --content-width: 1180px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+    // colors
+    --white-color: #fff;
+    --black-color: #000000;
+    --primary-color: #03BAFE;
+    --secondary-color: #FFA200;
+  
+    --base-transtion: all 0.3s ease 0s;
+}
