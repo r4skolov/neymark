@@ -45,11 +45,16 @@ a{
   text-decoration: none;
 }
 
+body {
+    background-color: var(--primary-color);
+}
+
 .site-container {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  
 }
 
 .main {
@@ -128,3 +133,87 @@ img {
     height: 1px;
     clip: rect(0 0 0 0);
 }
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tektur';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    border-radius: 600px;
+    padding: 16px 44px 18px 44px;
+    transition: var(--base-transtion);
+ 
+    &--white {
+        background-color: var(--white-color);
+        color: var(--purple-color);
+ 
+        &:hover {
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+        }
+
+        &:active {
+            background-color: var(--purplelight-color);
+        }
+    }
+
+    &--primary {
+        background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        color: var(--white-color);
+        &:hover {
+            background: linear-gradient(0deg, rgba(65, 0, 148, 0.15), rgba(65, 0, 148, 0.15)), linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        }
+
+        &:active {
+            background: linear-gradient(0deg, rgba(77, 53, 106, 0.3), rgba(77, 53, 106, 0.3)), linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        }
+    }
+
+    &--secondary {
+        background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-image: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        color: white;
+        border: solid 4px transparent;
+        border-image: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        border-image-slice: 1;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition: var(--base-transtion);
+
+        &:hover {
+            transition: var(--base-transtion);
+            background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        }
+    }
+
+    &--transparent {
+        border: 3px solid var(--color-white);
+        color: var(--color-white);
+
+        &:hover {
+            background-color: var(--color-white);
+            color: var(--purple-color);
+        }
+
+        &:active {
+            background-color: var(--purplelight-color);
+            color: var(--purple-color);
+        }
+    }
+}
+
+.section-title {
+    font-family: 'Tektur';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 100%;
+    color: var(--white-color);
+}
+

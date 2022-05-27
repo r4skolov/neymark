@@ -1,0 +1,34 @@
+.hero {
+    background-image: url("../img/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100vh;
+    min-height: 600px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 250px;
+    }
+
+    &__title {
+        font-family: 'Tektur';
+        font-size: 90px;
+        line-height: 100%;
+        font-weight: 400;
+        color: var(--white-color);
+        margin-bottom: 38px;
+    }
+
+    &__text {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 400;
+        color: var(--white-color);
+        max-width: 757px;
+        margin-bottom: 48px;
+    }
+}

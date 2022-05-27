@@ -1,0 +1,34 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding-top: 38px;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 80px;
+        }
+    }
+
+    &__link {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 27px;
+        color: var(--white-color);
+    }
+}

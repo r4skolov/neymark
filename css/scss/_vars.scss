@@ -1,15 +1,16 @@
 :root {
     // base
-    --font-family: "Nunito", sans-serif;
-    --content-width: 1180px;
-    --container-offset: 15px;
+    --font-family: "Manrope", sans-serif;
+    --content-width: 1420px;
+    --container-offset: 10px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   
     // colors
-    --white-color: #fff;
+    --white-color: #ffffff;
     --black-color: #000000;
-    --primary-color: #03BAFE;
-    --secondary-color: #FFA200;
+    --primary-color: #17172D;
+    --purple-color: #6B30AB;
+    --purplelight-color: #ECDFF2;
   
     --base-transtion: all 0.3s ease 0s;
 }

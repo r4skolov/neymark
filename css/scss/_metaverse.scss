@@ -1,0 +1,64 @@
+.metaverse {
+    padding: 180px 0;
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 50%;
+    }
+
+    &__right {
+        width: 50%;
+        padding-left: 51px;
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        margin-bottom: 121px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.active {
+            .metaverse__name {
+                background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            .metaverse__text {
+                color: var(--white-color);
+            }
+        }
+    }
+
+    &__name {
+        font-family: 'Tektur';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 100%;
+        font-feature-settings: 'ss01' on, 'zero' on;
+        color: #454557;
+        margin-bottom: 20px;
+        max-width: 557px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 140%;
+        color: #454557;
+        max-width: 490px;
+    }
+}
