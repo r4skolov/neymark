@@ -1,46 +1,38 @@
 .locations {
     position: relative;
-    min-height: 100vh;
+    
 
     &__container {
-        position: relative;
-        z-index: 2;
         width: 100%;
-        display: flex;
-        justify-content: end;
+        padding: 0;
     }
 
     &__wrapper {
         background-color: #262643;
-        padding: 67px 72px;
-        max-width: 617px;
+        padding: 48px 8px;
+        
     }
 
     &__head {
-        margin-bottom: 55px;
+        margin-bottom: 38px;
     }
 
     &__title {
-        font-family: 'Tektur';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 56px;
-        line-height: 100%;
         color: var(--white-color);
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
 
     &__subtitle {
         font-family: 'Tektur';
         font-style: normal;
         font-weight: 400;
-        font-size: 25px;
+        font-size: 14px;
         line-height: 125%;
         color: var(--white-color);
     }
 
     &__list {
-        padding-left: 47px;
+        padding-left: 42px;
     }
 
     &__item {
@@ -55,7 +47,7 @@
             content: "";
             position: absolute;
             top: 0;
-            left: -46px;
+            left: -38px;
             z-index: 1;
             background-image: url("../img/cub.png");
             background-repeat: no-repeat;
@@ -65,16 +57,16 @@
     }
 
     &__name {
-        font-weight: 600;
-        font-size: 24px;
+        font-size: 16px;
         line-height: 125%;
+        font-weight: 600;
         color: var(--white-color);
         margin-bottom: 5px;
     }
 
     &__time {
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 18px;
         font-weight: 400;
         color: var(--white-color);
         opacity: 0.75;
@@ -82,7 +74,7 @@
 }
 
 .map {
-    position: absolute;
+    position: static;
     top: 0;
     left: 0;
     z-index: 1;

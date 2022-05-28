@@ -1,16 +1,20 @@
 .about {
-    padding-top: 257px;
+    padding-top: 62px;
     position: relative;
+    overflow: hidden;
     &__container {
         display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 3;
     }
 
     &__left {
-        width: 50%;
+        width: 100%;
     }
 
     &__right {
-        width: 50%;
+        width: 100%;
         font-size: 0;
         img {
             position: relative;
@@ -19,13 +23,13 @@
     }
 
     &__title {
-        margin-bottom: 60px;
+        margin-bottom: 18px;
     }
 
     &__text {
         font-weight: 400;
-        font-size: 22px;
-        line-height: 34px;
+        font-size: 14px;
+        line-height: 22px;
         max-width: 580px;
         color: var(--white-color);
     }

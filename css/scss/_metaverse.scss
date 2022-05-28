@@ -1,27 +1,30 @@
 .metaverse {
-    padding: 180px 0;
+    padding: 72px 0;
 
     &__container {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        flex-direction: column-reverse;
     }
 
     &__left {
-        width: 50%;
+        width: 100%;
+        
+        img {
+            position: relative;
+            left: -35px;
+        }
     }
 
     &__right {
-        width: 50%;
-        padding-left: 51px;
+        width: 100%;
     }
 
     &__list {
-
+        margin-bottom: 32px;
     }
 
     &__item {
-        margin-bottom: 121px;
+        margin-bottom: 32px;
 
         &:last-child {
             margin-bottom: 0;
@@ -46,18 +49,18 @@
         font-family: 'Tektur';
         font-style: normal;
         font-weight: 400;
-        font-size: 64px;
+        font-size: 20px;
         line-height: 100%;
         font-feature-settings: 'ss01' on, 'zero' on;
         color: #454557;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         max-width: 557px;
     }
 
     &__text {
+        font-size: 14px;
         font-weight: 400;
-        font-size: 22px;
-        line-height: 140%;
+        line-height: 20px;
         color: #454557;
         max-width: 490px;
     }

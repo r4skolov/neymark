@@ -19,22 +19,22 @@
                 <nav class="nav">
                   <ul class="nav__list list-reset">
                      <li class="nav__item">
-                       <a class="nav__link" href="#">
+                       <a class="nav__link" href="#video" data-scroll>
                             О проекте
                        </a>
                      </li>
                      <li class="nav__item">
-                       <a class="nav__link" href="#">
+                       <a class="nav__link" href="#locations" data-scroll>
                             Локации
                        </a>
                      </li>
                      <li class="nav__item">
-                       <a class="nav__link" href="#">
+                       <a class="nav__link" href="#pass" data-scroll>
                             NFT
                        </a>
                      </li>
                      <li class="nav__item">
-                        <a class="nav__link" href="#">
+                        <a class="nav__link" href="#merch" data-scroll>
                             Мерч
                         </a>
                       </li>
@@ -70,8 +70,12 @@
                     </div>
                 </div>
             </section>
-            <section class="video">
-                <video src="img/1s.mp4" muted  loop class="video__item"></video>
+            <section class="video" id="video">
+                <div class="video-block">
+                    <video preload="auto" muted  loop class="video-block__item">
+                        <source type="video/mp4" src="img/1s.mp4">
+                    </video>
+                </div>
                 <div class="container video__container">
                     <div class="video__header">
                         <h2 class="video__title">
@@ -82,49 +86,49 @@
                 </div>
             </section>
             <section class="metaverse">
-                <div class="container metaverse__container">
-                    <h2 class="section-title visually-hidden">Метавселенная</h2>
-                    <div class="metaverse__left">
-                        <img src="img/img_dib4.png" alt="">
+                    <div class="container metaverse__container ">
+                        <h2 class="section-title visually-hidden">Метавселенная</h2>
+                        <div class="metaverse__left">
+                            <img src="img/img_dib4.png" alt="">
+                        </div>
+                        <div class="metaverse__right">
+                            <ul class="metaverse__list list-reset">
+                                <li class="metaverse__item active">
+                                    <h3 class="metaverse__name">
+                                        в 2023 году
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Открытие первых программ обучения
+                                    </p>
+                                </li>
+                                <li class="metaverse__item">
+                                    <h3 class="metaverse__name">
+                                        Более 4000
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Образовательных учреждений России уже имеют VR-оборудование
+                                    </p>
+                                </li>
+                                <li class="metaverse__item">
+                                    <h3 class="metaverse__name">
+                                        Только на ЦИПР и ЦИПР TechWeek
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Образовательных учреждений России уже имеют VR-оборудование
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="metaverse__right">
-                        <ul class="metaverse__list list-reset">
-                            <li class="metaverse__item">
-                                <h3 class="metaverse__name">
-                                    в 2023 году
-                                </h3>
-                                <p class="metaverse__text">
-                                    Открытие первых программ обучения
-                                </p>
-                            </li>
-                            <li class="metaverse__item active">
-                                <h3 class="metaverse__name">
-                                    Более 4000
-                                </h3>
-                                <p class="metaverse__text">
-                                    Образовательных учреждений России уже имеют VR-оборудование
-                                </p>
-                            </li>
-                            <li class="metaverse__item">
-                                <h3 class="metaverse__name">
-                                    Только на ЦИПР и ЦИПР TechWeek
-                                </h3>
-                                <p class="metaverse__text">
-                                    Образовательных учреждений России уже имеют VR-оборудование
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </section>
-            <section class="locations">
+            <section class="locations" id="locations">
                 <div class="map">
                     <img src="img/locations_map.png" class="map__img" alt="">
                 </div>
                 <div class="container locations__container">
                     <div class="locations__wrapper">
                         <div class="locations__head">
-                            <h2 class="locations__title">
+                            <h2 class="section-title locations__title">
                                 Запуск пилота в рамках ЦИПРа
                             </h2>
                             <p class="locations__subtitle">
@@ -177,8 +181,11 @@
                 </div>
             </section>
             <section class="nft">
-                <video src="img/nft-bg-video.mp4" muted autoplay loop class="nft__video"></video>
-                <div class="nft__container">
+                <video preload="metadata" muted autoplay loop class="nft__video">
+                    <source type="video/mp4" src="img/nft-bg-video.mp4">
+                </video>
+                <div class="container nft__container">
+                   <div class="nft__wrapper">
                     <div class="nft__item">
                         <h2 class="section-title nft__title">
                             Неймарк.<span>NFT</span>
@@ -187,9 +194,10 @@
                             В течение ЦИПР TECH WEEK, придя на один из стендов НЕЙМАРК.Metaverse, пользователи смогут создавать 3D-картину. Совместный арт будет преобразован в NFT, и продан с аукциона в качестве предмета современного цифрового искусства.
                         </p>
                     </div>
+                   </div>
                 </div>
             </section>
-            <section class="pass">
+            <section class="pass" id="pass">
                 <div class="container pass__container">
                     <div class="pass__left">
                         <div class="pass__head">
@@ -199,7 +207,11 @@
                             <p class="pass__text">
                                 Метапасс — это ваш пропуск в метавселенную в формате NFT, который позволяет владельцу получать доступ и подтверждать личность.
                             </p>
-                            <a href="#" class="btn btn-reset btn--secondary">Получить NFT-метапасс</a>
+                            <a href="#" class="btn btn-reset btn--secondary">
+                                <span>
+                                    Получить NFT-метапасс
+                                </span>
+                            </a>
                         </div>
                         <div class="pass__item">
                             <div class="pass__icon">
@@ -223,7 +235,20 @@
                     </div>
                 </div>
             </section>
-            <section class="merch">
+            <section class="merch" id="merch">
+                <div class="merch__wrapper">
+                    <div class="container merch__container">
+                        <div class="merch__wrap">
+                            <h2 class="section-title merch__title">
+                                Мерч от Неймарк.MetaVerse
+                            </h2>
+                            <p class="merch__text">
+                                Лимитированная коллекция в коллаборации с брендом Нейм 
+                            </p>
+                        </div>
+                        <a href="#" class="btn btn-reset btn--primary">Хочу мерч!</a>
+                    </div>
+                </div>
                 <div class="swiper merch__swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
@@ -243,35 +268,79 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>
                 </div>
-                    <div class="merch__wrapper">
-                        <div class="container merch__container">
-                            <div class="merch__wrap">
-                                <h2 class="section-title merch__title">
-                                    Мерч от Неймарк.MetaVerse
-                                </h2>
-                                <p class="merch__text">
-                                    Лимитированная коллекция в коллаборации с брендом Нейм 
-                                </p>
-                            </div>
-                            <a href="#" class="btn btn-reset btn--primary">Хочу мерч!</a>
-                        </div>
-                    </div>
             </section>
             <section class="partners">
                 <div class="container partners__container">
-
+                    <div class="partners__wrapper">
+                        <h2 class="section-title partners__title">Хотите стать партнёром?</h2>
+                        <form class="form" id="partners-form" method="POST" action="#" name="partners-form">
+                            <div class="form__body">
+                              <div class="form__group">
+                                <input class="form__input" type="text" name="partners-name" id="partners-name" placeholder="Имя" required>
+                              </div>
+                              <div class="form__group form--invalid">
+                                <input class="form__input" type="tel" name="partners-phone" id="partners-phone" placeholder="Телефон"
+                                  data-mask="tel" pattern="^(\\s*)?(\\+)?([- _():=+]?(\\s*)?(\\s*)?\\d[- _():=+]?(\\s*)){11,50}(\\s*)?$" required>
+                              </div>
+                              <div class="form__group">
+                                  <textarea class="form__area" name="partners-massage" id="" cols="30" rows="5" placeholder="Ваши предложения"></textarea>
+                              </div>
+                              <div class="form__group">
+                                <label class="custom-checkbox">
+                                  <input type="checkbox" class="custom-checkbox__field" id="partners-checkbox">
+                                  <span class="custom-checkbox__content"></span>
+                                  <span class="custom-checkbox__text">Согласие на <a href="#">обработку персональных данных</a>
+                                </span>
+                              </label>
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-reset btn--transparent">Отправить</button>
+                          </form>
+                    </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-            <div class="container">
-                footer
+            <div class="container footer__container">
+                <a href="#" class="footer__logo">
+                    <img src="img/logo-footer.svg" alt="">
+                </a>
+                <div class="footer__wrapper">
+                    <div class="footer__left">
+                        <div class="footer__group">
+                            <a href="tel:+79999999999" class="footer__link">+7 (999) 999-99-99</a>
+                            <a href="mailto:your@mail.com" class="footer__link">your@mail.com</a>
+                        </div>
+                        <div class="footer__group">
+                            <a href="#" class="footer__link">При поддержке Название организации</a>
+                            <a href="#" class="footer__link">Политика Конфиденциальности</a>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                           <ul class="socials list-reset">
+                               <li class="socials__item">
+                                   <a href="#" target="_blank">
+                                       <img src="img/vk.svg" alt="Vk">
+                                   </a>
+                               </li>
+                               <li class="socials__item">
+                                <a href="#" target="_blank">
+                                    <img src="img/tg.svg" alt="Telegram">
+                                </a>
+                            </li>
+                           </ul>
+                            <a href="#" class="footer__link" target="_blank">Разработано в R-Top</a>
+                    </div>
+                </div>
             </div>
         </footer>
         <!-- Далее модальные окна если будут -->
 
     </div>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/gspa.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
