@@ -547,6 +547,10 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 
+.logo {
+  width: 107px;
+}
+
 .hero {
   background-image: url("../img/hero.jpg");
   background-repeat: no-repeat;
