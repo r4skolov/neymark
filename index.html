@@ -17,29 +17,34 @@
                     <img src="img/logo.svg" alt="Logo">
                 </a>
                 <nav class="nav">
-                  <ul class="nav__list list-reset">
-                     <li class="nav__item">
-                       <a class="nav__link" href="#video" data-scroll>
-                            О проекте
-                       </a>
-                     </li>
-                     <li class="nav__item">
-                       <a class="nav__link" href="#locations" data-scroll>
-                            Локации
-                       </a>
-                     </li>
-                     <li class="nav__item">
-                       <a class="nav__link" href="#pass" data-scroll>
-                            NFT
-                       </a>
-                     </li>
-                     <li class="nav__item">
-                        <a class="nav__link" href="#merch" data-scroll>
-                            Мерч
-                        </a>
-                      </li>
-                  </ul>
+                    <div class="nav__wrapper">
+                        <ul class="nav__list list-reset">
+                            <li class="nav__item">
+                              <a class="nav__link" href="#video" data-scroll>
+                                   О проекте
+                              </a>
+                            </li>
+                            <li class="nav__item">
+                              <a class="nav__link" href="#locations" data-scroll>
+                                   Локации
+                              </a>
+                            </li>
+                            <li class="nav__item">
+                              <a class="nav__link" href="#pass" data-scroll>
+                                   NFT
+                              </a>
+                            </li>
+                            <li class="nav__item">
+                               <a class="nav__link" href="#merch" data-scroll>
+                                   Мерч
+                               </a>
+                             </li>
+                         </ul>
+                    </div>
                 </nav>
+                <button class="burger">
+                    <span class="burger__line"></span>
+                  </button>
             </div>
         </header>
         <main class="main">
@@ -72,7 +77,7 @@
             </section>
             <section class="video" id="video">
                 <div class="video-block">
-                    <video preload="auto" muted  loop class="video-block__item">
+                    <video preload="metadata" autoplay muted playsinline loop  class="video-block__item">
                         <source type="video/mp4" src="img/1s.mp4">
                     </video>
                 </div>
@@ -93,29 +98,35 @@
                         </div>
                         <div class="metaverse__right">
                             <ul class="metaverse__list list-reset">
-                                <li class="metaverse__item active">
+                                <li class="metaverse__item" id="high1">
+                                   <div id="sec1">
                                     <h3 class="metaverse__name">
                                         в 2023 году
                                     </h3>
                                     <p class="metaverse__text">
                                         Открытие первых программ обучения
                                     </p>
+                                   </div>
                                 </li>
-                                <li class="metaverse__item">
-                                    <h3 class="metaverse__name">
-                                        Более 4000
-                                    </h3>
-                                    <p class="metaverse__text">
-                                        Образовательных учреждений России уже имеют VR-оборудование
-                                    </p>
+                                <li class="metaverse__item" id="high2">
+                                    <div id="sec2">
+                                        <h3 class="metaverse__name active">
+                                            Более 4000
+                                        </h3>
+                                        <p class="metaverse__text">
+                                            Образовательных учреждений России уже имеют VR-оборудование
+                                        </p>
+                                    </div>
                                 </li>
-                                <li class="metaverse__item">
-                                    <h3 class="metaverse__name">
-                                        Только на ЦИПР и ЦИПР TechWeek
-                                    </h3>
-                                    <p class="metaverse__text">
-                                        Образовательных учреждений России уже имеют VR-оборудование
-                                    </p>
+                                <li class="metaverse__item" id="high3">
+                                    <div id="sec3">
+                                        <h3 class="metaverse__name">
+                                            Только на ЦИПР и ЦИПР TechWeek
+                                        </h3>
+                                        <p class="metaverse__text">
+                                            Образовательных учреждений России уже имеют VR-оборудование
+                                        </p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -123,7 +134,39 @@
             </section>
             <section class="locations" id="locations">
                 <div class="map">
-                    <img src="img/locations_map.png" class="map__img" alt="">
+                    <div class="map__wrap">
+                        <img src="img/locations_map.png" class="map__img" alt="">
+                        <div class="map__dots active" data-dot="#dot_6">
+                            <span class="map__dot">
+                                <img src="img/Subtract.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="map__dots" data-dot="#dot_2">
+                            <span class="map__dot">
+                                <img src="img/Subtract.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="map__dots" data-dot="#dot_3">
+                            <span class="map__dot">
+                                <img src="img/Subtract.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="map__dots" data-dot="#dot_4">
+                            <span class="map__dot">
+                                <img src="img/Subtract.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="map__dots" data-dot="#dot_5">
+                            <span class="map__dot">
+                                <img src="img/Subtract.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="map__dots" data-dot="#dot_1">
+                            <span class="map__dot">
+                                <img src="img/Subtract.svg" alt="">
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 <div class="container locations__container">
                     <div class="locations__wrapper">
@@ -136,41 +179,41 @@
                             </p>
                         </div>
                         <ul class="locations__list list-reset">
-                            <li class="locations__item">
+                            <li class="locations__item" id="dot_1">
                                 <h4 class="locations__name">ИЦАЕ, Семашко 7Б</h4>
                                 <span class="locations__time">
                                     30 мая, 17:00-21:00 <br>       
                                     31 мая, 17:00-20:00 
                                 </span>
                             </li>
-                            <li class="locations__item">
+                            <li class="locations__item" id="dot_4">
                                 <h4 class="locations__name">Точка Кипения, Площадь Минина и Пожарского 7</h4>
                                 <span class="locations__time">
                                     30 мая, 17:00-21:00 <br>       
                                     31 мая, 17:00-20:00 
                                 </span>
                             </li>
-                            <li class="locations__item">
+                            <li class="locations__item" id="dot_3">
                                 <h4 class="locations__name">МТС StartUp Hub, Алексеевская 6/16</h4>
                                 <span class="locations__time">
                                     30 мая, 17:00-21:00 <br>       
                                     31 мая, 17:00-20:00 
                                 </span>
                             </li>
-                            <li class="locations__item">
+                            <li class="locations__item" id="dot_2">
                                 <h4 class="locations__name">ул. Почаинская, 17, ЛИТ. КК1</h4>
                                 <span class="locations__time">
                                     30 мая, 17:00-21:00 <br>       
                                     31 мая, 17:00-20:00 
                                 </span>
                             </li>
-                            <li class="locations__item">
+                            <li class="locations__item active" id="dot_6">
                                 <h4 class="locations__name">ЦИПР, Нижегородская Ярмарка, Совнаркомовская 13</h4>
                                 <span class="locations__time">
                                     30 мая, 17:00-21:00       
                                 </span>
                             </li>
-                            <li class="locations__item">
+                            <li class="locations__item" id="dot_5">
                                 <h4 class="locations__name">Сбер Garage, Октябрьская 35</h4>
                                 <span class="locations__time">
                                     30 мая, 17:00-21:00    
@@ -181,7 +224,7 @@
                 </div>
             </section>
             <section class="nft">
-                <video preload="metadata" muted autoplay loop class="nft__video">
+                <video preload="metadata" autoplay muted playsinline loop class="nft__video">
                     <source type="video/mp4" src="img/nft-bg-video.mp4">
                 </video>
                 <div class="container nft__container">
@@ -238,15 +281,15 @@
             <section class="merch" id="merch">
                 <div class="merch__wrapper">
                     <div class="container merch__container">
-                        <div class="merch__wrap">
-                            <h2 class="section-title merch__title">
-                                Мерч от Неймарк.MetaVerse
-                            </h2>
-                            <p class="merch__text">
-                                Лимитированная коллекция в коллаборации с брендом Нейм 
-                            </p>
-                        </div>
-                        <a href="#" class="btn btn-reset btn--primary">Хочу мерч!</a>
+                    <div class="merch__wrap">
+                        <h2 class="section-title merch__title">
+                            Мерч от Неймарк.MetaVerse
+                        </h2>
+                        <p class="merch__text">
+                            Лимитированная коллекция в коллаборации с брендом Нейм 
+                        </p>
+                    </div>
+                    <a href="#" class="btn btn-reset btn--primary">Хочу мерч!</a>
                     </div>
                 </div>
                 <div class="swiper merch__swiper">
@@ -273,25 +316,35 @@
                 <div class="container partners__container">
                     <div class="partners__wrapper">
                         <h2 class="section-title partners__title">Хотите стать партнёром?</h2>
-                        <form class="form" id="partners-form" method="POST" action="#" name="partners-form">
+                        <form class="form " id="partners-form" method="POST" action="#" name="partners-form">
                             <div class="form__body">
-                              <div class="form__group">
-                                <input class="form__input" type="text" name="partners-name" id="partners-name" placeholder="Имя" required>
+                              <div class="form__group form--invalid">
+                                  <div class="form__wrap">
+                                      <input class="form__input" type="text" name="partners-name" id="partners-name" placeholder="Имя" required>
+                                  </div>
                               </div>
                               <div class="form__group form--invalid">
-                                <input class="form__input" type="tel" name="partners-phone" id="partners-phone" placeholder="Телефон"
-                                  data-mask="tel" pattern="^(\\s*)?(\\+)?([- _():=+]?(\\s*)?(\\s*)?\\d[- _():=+]?(\\s*)){11,50}(\\s*)?$" required>
+                                <div class="form__wrap">
+                                    <input class="form__input" type="tel" name="partners-phone" id="partners-phone" placeholder="Телефон"
+                                    data-mask="tel" pattern="^(\\s*)?(\\+)?([- _():=+]?(\\s*)?(\\s*)?\\d[- _():=+]?(\\s*)){11,50}(\\s*)?$" required>
+                                </div>
                               </div>
-                              <div class="form__group">
+                              <div class="form__group form--invalid">
+                                <div class="form__wrap form__wrap--area">
                                   <textarea class="form__area" name="partners-massage" id="" cols="30" rows="5" placeholder="Ваши предложения"></textarea>
+                                </div>
                               </div>
-                              <div class="form__group">
+                              <div class="form__group form--invalid">
                                 <label class="custom-checkbox">
                                   <input type="checkbox" class="custom-checkbox__field" id="partners-checkbox">
                                   <span class="custom-checkbox__content"></span>
                                   <span class="custom-checkbox__text">Согласие на <a href="#">обработку персональных данных</a>
                                 </span>
                               </label>
+                              </div>
+                              <div class="form__group  form__group--warning form--invalid">
+                                    <img src="img/warning.svg" alt="">
+                                    <span>Необходимо заполнить поля</span>
                               </div>
                             </div>
                             <button type="button" class="btn btn-reset btn--transparent">Отправить</button>
@@ -334,13 +387,11 @@
                 </div>
             </div>
         </footer>
-        <!-- Далее модальные окна если будут -->
-
     </div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/gspa.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/ScrollMagic.min.js"></script>
+    <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

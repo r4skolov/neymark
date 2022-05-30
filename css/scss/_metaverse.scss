@@ -32,15 +32,11 @@
 
         &.active {
             .metaverse__name {
-                background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-fill-color: transparent;
+              
             }
 
             .metaverse__text {
-                color: var(--white-color);
+                
             }
         }
     }
@@ -52,16 +48,22 @@
         font-size: 20px;
         line-height: 100%;
         font-feature-settings: 'ss01' on, 'zero' on;
-        color: #454557;
+        
         margin-bottom: 12px;
         max-width: 557px;
+
+        background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
     }
 
     &__text {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
-        color: #454557;
         max-width: 490px;
+        color: var(--white-color);
     }
 }
