@@ -143,4 +143,78 @@ document.addEventListener("DOMContentLoaded", () => {
 					.setClassToggle("#high4", "active")
 					.addTo(controller);
 
+
+  const form = document.querySelector('.form');
+  const telSelector = form.querySelector('input[type="tel"]')
+  const inputMask = new Inputmask('+7 (999) 999-99-99');
+  inputMask.mask(telSelector);
+  const inputText = form.querySelector('#partners-name');
+  const inputTel = form.querySelector('#partners-phone');
+  const inputArea = form.querySelector('#partners-massage');
+  const checkbox = form.querySelector('#partners-checkbox');
+  const formGroup = form.querySelectorAll('.test');
+  
+
+  const validateBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    
+    for (let i=0; i < formGroup.length; i++) {
+      if (!formGroup[i].value) {
+        const error = form.querySelectorAll('.form__group');
+        error.forEach(el => {
+          el.classList.add('form--invalid');
+        });
+      }
+    }
+  });
+
+
+  if (window.matchMedia("(min-width: 790px)").matches) {
+	
+    setTimeout(() => {
+      
+      const map = (x, a, b, c, d) => clamp((x - a) * (d - c) / (b - a) + c, Math.min(c,d), Math.max(c,d));
+      const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
+      const images = [...document.querySelectorAll('.scale')];
+        
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        inertia:.75,
+        smartphone: {smooth: true},
+        tablet: {smooth: true}
+      });
+      
+      scroller.update();
+      
+    }, 1000)
+    
+  } 
+
+  function preloader() {
+    const hellopreloader = document.querySelector('.loader');
+    const body = document.querySelector('.page__body');
+    function fadeOutno(el) {
+        el.style.opacity = 1;
+        const interhellopreloader = setInterval(function () {
+            el.style.opacity = el.style.opacity - 0.05;
+            if (el.style.opacity <= 0.05) {
+                clearInterval(interhellopreloader);
+                hellopreloader.style.display = "none";
+                body.classList.remove('scroll')
+            }
+        }, 16);
+    }
+    window.onload = function () {
+        setTimeout(function () {
+            fadeOutno(hellopreloader);
+        }, 1000);
+    };
+  }
+
+  preloader();
+    
+  
+
 });

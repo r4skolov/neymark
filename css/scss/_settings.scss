@@ -282,3 +282,17 @@ select:-webkit-autofill:focus {
     color: var(--white-color);
 }
 
+
+.loader {
+    display: block;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #17172D url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;
+    background-size: 41px;
+}
