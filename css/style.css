@@ -390,6 +390,86 @@ select:-webkit-autofill:focus {
   background-size: 41px;
 }
 
+.smooth-scroll {
+  width: 100%;
+  overflow: hidden !important;
+  -webkit-transition: .9s ease;
+  transition: .9s ease;
+  opacity: 1;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 6px;
+  height: 100vh;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
+  mix-blend-mode: difference;
+}
+
+.c-scrollbar:hover {
+  -webkit-transform: scaleX(1.45);
+          transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--blanc);
+  opacity: 1;
+  width: 3px;
+  border-radius: 20px;
+  margin: 4px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.c-scrollbar_display {
+  opacity: 0 !important;
+  -webkit-transition: .3s !important;
+  transition: .3s !important;
+}
+
 .header {
   position: absolute;
   top: 0;

@@ -14,38 +14,50 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // scroll к секции
-  const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 300
-  });
-
-
-  // запуск видео по скролу в секции
-  window.addEventListener('load', videoScroll);
-  window.addEventListener('scroll', videoScroll);
-  
-  function videoScroll() {
-  
+    // запуск видео по скролу в секции
+    window.addEventListener('load', videoScroll);
+    window.addEventListener('scroll', videoScroll);
     
-      var windowHeight = window.innerHeight,
-          videoEl = document.querySelectorAll('.video-block__item');
-  
-      for (var i = 0; i < videoEl.length; i++) {
-  
-        var thisVideoEl = videoEl[i],
-            videoHeight = thisVideoEl.clientHeight,
-            videoClientRect = thisVideoEl.getBoundingClientRect().top;
-  
-        if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
-          thisVideoEl.play();
-        } else {
-          thisVideoEl.pause();
+    function videoScroll() {
+    
+      
+        var windowHeight = window.innerHeight,
+            videoEl = document.querySelectorAll('.video-block__item');
+    
+        for (var i = 0; i < videoEl.length; i++) {
+    
+          var thisVideoEl = videoEl[i],
+              videoHeight = thisVideoEl.clientHeight,
+              videoClientRect = thisVideoEl.getBoundingClientRect().top;
+    
+          if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
+            thisVideoEl.play();
+          } else {
+            thisVideoEl.pause();
+          }
+    
         }
-  
-      }
     
-  
+    }
+
+
+ 
+  if (window.matchMedia("(min-width: 790px)").matches) {
+    function scrollTest () {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+      });
+      scroll.on('call', func => {
+        
+      });
+    }
+    scrollTest();
   }
+
+ 
+
+
 
 
 
@@ -170,27 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  if (window.matchMedia("(min-width: 790px)").matches) {
-	
-    setTimeout(() => {
-      
-      const map = (x, a, b, c, d) => clamp((x - a) * (d - c) / (b - a) + c, Math.min(c,d), Math.max(c,d));
-      const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
-      const images = [...document.querySelectorAll('.scale')];
-        
-      const scroller = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        inertia:.75,
-        smartphone: {smooth: true},
-        tablet: {smooth: true}
-      });
-      
-      scroller.update();
-      
-    }, 1000)
-    
-  } 
 
   function preloader() {
     const hellopreloader = document.querySelector('.loader');
@@ -212,9 +203,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     };
   }
-
   preloader();
+
     
+   // scroll к секции
+  //  const scroll = new SmoothScroll('a[href*="#"]', {
+  //   speed: 300
+  // });
+ 
   
 
 });

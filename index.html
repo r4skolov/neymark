@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="css/locomotive-scroll.min.css">
 </head>
 
-<body class="page__body scroll">
+<body class="page__body scroll" >
     <div class="preload">
         <div class="loader"></div>
     </div>
-    <div class="site-container" data-scroll-container>
-        <header class="header">
+    <div class="site-container" data-scroll-container data-scroll-section>
+        <header class="header" >
             <div class="container header__container">
                 <a href="#" class="logo">
                     <img src="img/logo.svg" alt="Logo">
@@ -28,22 +28,22 @@
                     <div class="nav__wrapper">
                         <ul class="nav__list list-reset">
                             <li class="nav__item">
-                                <a class="nav__link" href="#video" data-scroll>
+                                <a class="nav__link" href="#video" data-scroll-to>
                                     О проекте
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#locations" data-scroll>
+                                <a class="nav__link" href="#locations" data-scroll-to>
                                     Локации
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#pass" data-scroll>
+                                <a class="nav__link" href="#pass" data-scroll-to>
                                     NFT
                                 </a>
                             </li>
                             <li class="nav__item">
-                                <a class="nav__link" href="#merch" data-scroll>
+                                <a class="nav__link" href="#merch" data-scroll-to>
                                     Мерч
                                 </a>
                             </li>
@@ -56,7 +56,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="hero">
+            <section class="hero" >
                 <div class="container hero__container">
                     <h1 class="hero__title">
                         Неймарк.MetaVerse
@@ -67,7 +67,7 @@
                     <a href="#" class="btn btn-reset btn--white">Узнать больше</a>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" >
                 <span class="gradient1"></span>
                 <div class="container about__container">
                     <div class="about__left fx" data-scroll>
@@ -86,9 +86,9 @@
                     </div>
                 </div>
             </section>
-            <section class="video" id="video">
-                <div class="video-block">
-                    <video preload="metadata" autoplay muted playsinline loop class="video-block__item">
+            <section class="video " id="video">
+                <div class="video-block" data-scroll data-scroll-call="func">
+                    <video preload="metadata"  class="video-block__item">
                         <source type="video/mp4" src="img/1s.mp4">
                     </video>
                 </div>
@@ -107,9 +107,9 @@
                     <div class="metaverse__left">
                         <img src="img/img_dib4.png" alt="">
                     </div>
-                    <div class="metaverse__right">
+                    <div class="metaverse__right" id="lerp-effect">
                         <ul class="metaverse__list list-reset">
-                            <li class="metaverse__item" id="high1">
+                            <li class="metaverse__item" id="high1" data-scroll data-scroll-delay="0.2" data-scroll-speed="6" data-scroll-call="dynamiColor" data-scroll-repeat>
                                 <div id="sec1">
                                     <h3 class="metaverse__name">
                                         в 2023 году
@@ -119,7 +119,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="metaverse__item" id="high2">
+                            <li class="metaverse__item" id="high2" data-scroll data-scroll-delay="0.6" data-scroll-speed="6">
                                 <div id="sec2">
                                     <h3 class="metaverse__name active">
                                         Более 4000
@@ -129,7 +129,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="metaverse__item" id="high3">
+                            <li class="metaverse__item" id="high3"  data-scroll data-scroll-delay="0.8" data-scroll-speed="6">
                                 <div id="sec3">
                                     <h3 class="metaverse__name">
                                         Только на ЦИПР и ЦИПР TechWeek
@@ -143,7 +143,7 @@
                     </div>
                 </div>
             </section>
-            <section class="locations" id="locations">
+            <section class="locations" id="locations" >
                 <div class="map">
                     <div class="map__wrap">
                         <img src="img/locations_map.png" class="map__img" alt="">
@@ -408,11 +408,9 @@
         </footer>
     </div>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/inputmask.min.js"></script>
-    <script src="js/aos.js"></script>
     <script src="js/locomotive-scroll.min.js"></script>
     <script src="js/main.js"></script>
 </body>

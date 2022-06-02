@@ -30,40 +30,40 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
-a{
-  color: inherit;
-  text-decoration: none;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 body {
     background-color: var(--primary-color);
-    
+
 }
 
 .site-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .footer {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .page {
@@ -142,18 +142,19 @@ input[type='search'],
 input[type='password'],
 input[type='number'],
 textarea {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  outline: none;
-  appearance: none;
-  box-sizing: border-box;
-  font-family: 'Jura';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  color: var(--white-color);
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+    box-sizing: border-box;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--white-color);
+
     &::placeholder {
         font-family: 'Jura';
         font-style: normal;
@@ -165,7 +166,7 @@ textarea {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
+input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
@@ -173,11 +174,11 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  border: none;
-  -webkit-text-fill-color: #fff;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
-  border-bottom: 1px solid #fff;
-  transition: background-color 5000s ease-in-out 0s;
+    border: none;
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+    border-bottom: 1px solid #fff;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 
@@ -190,7 +191,7 @@ select:-webkit-autofill:focus {
     font-weight: 400;
     border-radius: 600px;
     transition: var(--base-transtion);
- 
+
     &--white {
         background-color: var(--white-color);
         color: var(--purple-color);
@@ -200,7 +201,7 @@ select:-webkit-autofill:focus {
                 box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
             }
         }
- 
+
         &:active {
             background-color: var(--purplelight-color);
         }
@@ -209,7 +210,7 @@ select:-webkit-autofill:focus {
     &--primary {
         color: var(--white-color);
         background-image: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
-        
+
         @media (min-width: (768px)) {
             &:hover {
                 box-shadow: rgba(var(--primaryy-color), 0.9) 0px 0px 20px 0px;
@@ -226,23 +227,30 @@ select:-webkit-autofill:focus {
         $border: 3px;
         color: #FFF;
         background: var(--primary-color);
-        background-clip: padding-box; /* !importanté */
-        border: solid $border transparent; /* !importanté */
+        background-clip: padding-box;
+        /* !importanté */
+        border: solid $border transparent;
+        /* !importanté */
         border-radius: 600px;
-        
+
         &:before {
-          content: '';
-          position: absolute;
-          top: 0; right: 0; bottom: 0; left: 0;
-          z-index: -1;
-          margin: -$border; /* !importanté */
-          border-radius: inherit; /* !importanté */
-          background: linear-gradient(to right, rgba(51, 227, 238, 1),rgba(201, 158, 255, 1),rgba(255, 148, 251, 1));
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -$border;
+            /* !importanté */
+            border-radius: inherit;
+            /* !importanté */
+            background: linear-gradient(to right, rgba(51, 227, 238, 1), rgba(201, 158, 255, 1), rgba(255, 148, 251, 1));
         }
-    
+
         span {
             display: block;
-            background: linear-gradient(to right, rgba(51, 227, 238, 1),rgba(201, 158, 255, 1),rgba(255, 148, 251, 1));
+            background: linear-gradient(to right, rgba(51, 227, 238, 1), rgba(201, 158, 255, 1), rgba(255, 148, 251, 1));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -264,7 +272,7 @@ select:-webkit-autofill:focus {
                 color: var(--purple-color);
             }
         }
-    
+
         &:active {
             background-color: var(--purplelight-color);
             color: var(--purple-color);
@@ -295,4 +303,78 @@ select:-webkit-autofill:focus {
     height: 100%;
     background: #17172D url(http://hello-site.ru//main/images/preloads/grid.svg) center center no-repeat;
     background-size: 41px;
+}
+
+
+.smooth-scroll {
+    width: 100%;
+    overflow: hidden !important;
+    transition: .9s ease;
+    opacity: 1;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh;
+}
+
+.c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    width: 6px;
+    height: 100vh;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    mix-blend-mode: difference;
+}
+
+.c-scrollbar:hover {
+    transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+    opacity: 1;
+}
+
+.c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--blanc);
+    opacity: 1;
+    width: 3px;
+    border-radius: 20px;
+    margin: 4px;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+.c-scrollbar_display {
+    opacity: 0 !important;
+    transition: .3s !important;
 }
