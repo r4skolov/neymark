@@ -29,6 +29,8 @@
 
     &__right {
         width: 100%;
+        position: relative;
+        text-align: right;
     }
 
     &__title {
@@ -65,4 +67,17 @@
             width: 90%;
         }
     }
+
+    &__desktop {
+        display: none;
+    }
+}
+
+.small-pass {
+    display: none;
+    position: absolute;
+    bottom: -73px;
+    left: 0px;
+    z-index: 1;
+    transform: translateY(-140px);
 }
