@@ -5,6 +5,7 @@
     background-position: top;
     height: 100vh;
     min-height: 600px;
+    position: relative;
 
     &__container {
         display: flex;
@@ -12,6 +13,8 @@
         align-items: center;
         text-align: center;
         padding-top: 105px;
+        position: relative;
+        z-index: 4;
     }
 
     &__title {
@@ -30,5 +33,149 @@
         color: var(--white-color);
         max-width: 757px;
         margin-bottom: 32px;
+    }
+}
+
+.stars {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &__item {
+        position: absolute;
+        top: 29%;
+        left: 15%;
+        z-index: 1;
+        animation: stars1 15s ease infinite;
+    }
+
+    &__item-2 {
+        position: absolute;
+        top: 10%;
+        left: 25%;
+        z-index: 1;
+        animation: stars2 10s ease infinite;
+        animation-delay: 4s;
+    }
+
+    &__item-3 {
+        position: absolute;
+        top: 20%;
+        left: 45%;
+        z-index: 1;
+        animation: stars3 15s ease infinite;
+        animation-delay: 6s;
+    }
+
+    &__item-4 {
+        position: absolute;
+        top: 30%;
+        right: 25%;
+        z-index: 1;
+        animation: stars4 25s ease infinite;
+        // animation-delay: 6s;
+    }
+
+    &__item-5 {
+        position: absolute;
+        top: 60%;
+        right: 25%;
+        z-index: 1;
+        animation: stars5 25s ease infinite;
+        animation-delay: 6s;
+    }
+
+    &__item-6 {
+        position: absolute;
+        top: 40%;
+        right: 45%;
+        z-index: 1;
+        animation: stars6 15s ease infinite;
+        animation-delay: 10s;
+    }
+
+    &__item-6 {
+        position: absolute;
+        top: 0%;
+        right: 35%;
+        z-index: 1;
+    }
+}
+
+@keyframes stars1 {
+    0% {
+        top: 30%;
+        opacity: 1;
+    }
+
+
+    100% {
+        top: 75%;
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes stars2 {
+    0% {
+        top: 10%;
+        opacity: 1;
+    }
+
+
+    100% {
+        top: 95%;
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes stars3 {
+    0% {
+        top: 20%;
+        opacity: 1;
+    }
+
+
+    100% {
+        top: 65%;
+        opacity: 0;
+    }
+}
+
+@keyframes stars4 {
+    0% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes stars5 {
+    0% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes stars6 {
+    0% {
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
     }
 }

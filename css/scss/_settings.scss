@@ -6,8 +6,19 @@
 html {
     box-sizing: border-box;
     height: 100%;
-    scroll-behavior: smooth;
+    
 }
+
+.js-scroll {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    will-change: transform;
+}
+
 
 *,
 *::before,
