@@ -28,7 +28,7 @@
                     <div class="nav__wrapper">
                         <ul class="nav__list list-reset">
                             <li class="nav__item">
-                                <a class="nav__link" href="#video" data-scroll-to>
+                                <a class="nav__link" href="#video"  data-scroll data-scroll-to>
                                     О проекте
                                 </a>
                             </li>
@@ -86,9 +86,9 @@
                     </div>
                 </div>
             </section>
-            <section class="video " id="video">
-                <div class="video-block" data-scroll data-scroll-call="func">
-                    <video preload="metadata"  class="video-block__item">
+            <section class="video " id="video" data-scroll-id>
+                <div class="video-block">
+                    <video preload="metadata"  class="video-block__item" muted playsinline loop data-scroll data-scroll-call="videoScroll">
                         <source type="video/mp4" src="img/1s.mp4">
                     </video>
                 </div>
@@ -409,6 +409,7 @@
     </div>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
+    <!-- <script src="js/smooth-scroll.min.js"></script> -->
     <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/inputmask.min.js"></script>
     <script src="js/locomotive-scroll.min.js"></script>

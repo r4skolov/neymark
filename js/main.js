@@ -14,52 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-    // запуск видео по скролу в секции
-    window.addEventListener('load', videoScroll);
-    window.addEventListener('scroll', videoScroll);
-    
-    function videoScroll() {
-    
-      
-        var windowHeight = window.innerHeight,
-            videoEl = document.querySelectorAll('.video-block__item');
-    
-        for (var i = 0; i < videoEl.length; i++) {
-    
-          var thisVideoEl = videoEl[i],
-              videoHeight = thisVideoEl.clientHeight,
-              videoClientRect = thisVideoEl.getBoundingClientRect().top;
-    
-          if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
-            thisVideoEl.play();
-          } else {
-            thisVideoEl.pause();
-          }
-    
-        }
-    
-    }
-
-
  
-  if (window.matchMedia("(min-width: 790px)").matches) {
-    function scrollTest () {
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-      });
-      scroll.on('call', func => {
-        
-      });
-    }
-    scrollTest();
-  }
-
- 
-
-
-
-
 
   // бургер меню
   function disableScroll() {
@@ -206,11 +161,62 @@ document.addEventListener("DOMContentLoaded", () => {
   preloader();
 
     
-   // scroll к секции
-  //  const scroll = new SmoothScroll('a[href*="#"]', {
-  //   speed: 300
+  //  scroll к секции
+  //  const scroLL = new SmoothScroll('a[href*="#"]', {
+  //   speed: 300,
+  //   ignore: '[data-scroll-to]',
   // });
  
+  window.addEventListener('scroll', videoScroll);
+       
+  function videoScroll() {
+    var windowHeight = window.innerHeight,
+        videoEl = document.querySelectorAll('.video-block__item');
+
+    for (var i = 0; i < videoEl.length; i++) {
+
+      var thisVideoEl = videoEl[i],
+          videoHeight = thisVideoEl.clientHeight,
+          videoClientRect = thisVideoEl.getBoundingClientRect().top;
+
+      if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
+        thisVideoEl.play();
+      } else {
+        thisVideoEl.pause();
+      }
+
+    }
+
+  }
   
+  videoScroll();
+
+ 
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true,
+    });
+    scroll.on('scroll', (videoScroll) => {
+     
+      var windowHeight = window.innerHeight,
+      videoEl = document.querySelectorAll('.video-block__item');
+        if ((videoScroll.scroll.y) >= 1500) {
+          
+          for (var i = 0; i < videoEl.length; i++) {
+      
+            var thisVideoEl = videoEl[i],
+                videoHeight = thisVideoEl.clientHeight,
+                videoClientRect = thisVideoEl.getBoundingClientRect().top;
+      
+            if ( videoClientRect <= ( (windowHeight) - (videoHeight*.5) ) && videoClientRect >= ( 0 - ( videoHeight*.5 ) ) ) {
+              thisVideoEl.play();
+            } else {
+              thisVideoEl.pause();
+            }
+      
+          }
+
+        } 
+    });
 
 });

@@ -24,6 +24,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -398,11 +399,6 @@ select:-webkit-autofill:focus {
   opacity: 1;
 }
 
-html,
-body {
-  overflow: hidden;
-}
-
 html.has-scroll-dragging {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -431,8 +427,9 @@ html.has-scroll-dragging {
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  opacity: 0;
+  opacity: 1;
   mix-blend-mode: difference;
+  background-color: #6B30AB;
 }
 
 .c-scrollbar:hover {
@@ -450,7 +447,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--blanc);
+  background-color: #fff;
   opacity: 1;
   width: 3px;
   border-radius: 20px;
@@ -462,10 +459,11 @@ html.has-scroll-dragging {
 .has-scroll-dragging .c-scrollbar_thumb {
   cursor: -webkit-grabbing;
   cursor: grabbing;
+  background-color: #fff;
 }
 
 .c-scrollbar_display {
-  opacity: 0 !important;
+  opacity: 1 !important;
   -webkit-transition: .3s !important;
   transition: .3s !important;
 }
