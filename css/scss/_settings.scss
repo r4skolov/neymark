@@ -181,15 +181,21 @@ select:-webkit-autofill:focus {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Tektur';
-    font-weight: 400;
+   
     border-radius: 600px;
     transition: var(--base-transtion);
+
+    span {
+        font-family: 'Tektur';
+        font-weight: 400;
+        color: var(--white-color);
+        position: relative;
+        z-index: 5;
+    }
 
     &--white {
         background-color: var(--white-color);
         color: var(--purple-color);
-
         @media (min-width: (768px)) {
             &:hover {
                 box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
@@ -204,15 +210,51 @@ select:-webkit-autofill:focus {
     &--primary {
         color: var(--white-color);
         background-image: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+        position: relative;
+       
 
         @media (min-width: (768px)) {
-            &:hover {
-                box-shadow: rgba(var(--primaryy-color), 0.9) 0px 0px 20px 0px;
+            &:hover::before {
+                opacity: 0.5;
+                visibility: visible;
+                transition:  opacity 0.3s ease;
             }
         }
 
-        &:active {
-            opacity: .7;
+        &:active::after {
+            opacity: 1;
+            visibility: visible;
+            transition:  opacity 0.3s ease;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(77, 53, 106, 0.3), rgba(77, 53, 106, 0.3)), linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 600px;
+            transition:  all 0.3s ease;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(65, 0, 148, 0.15), rgba(65, 0, 148, 0.15)), linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 600px;
+            transition:  all 0.3s ease;
         }
     }
 
@@ -222,10 +264,50 @@ select:-webkit-autofill:focus {
         color: #FFF;
         background: var(--primary-color);
         background-clip: padding-box;
-        /* !importanté */
         border: solid $border transparent;
-        /* !importanté */
         border-radius: 600px;
+
+        @media (min-width: (768px)) {
+            &:hover::after {
+                opacity: 1;
+                visibility: visible;
+                transition:  opacity 0.3s ease;
+            }
+
+            // &:hover::before {
+            //     opacity: 0;
+            //     visibility: hidden;
+            //     transition:  opacity 0.3s ease;
+            // }
+
+            &:hover span{
+                background: #fff;
+                transition:  all 0.3s ease;
+                -webkit-background-clip: text;
+                 -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &:active::after {
+            opacity: 0.8;
+            visibility: visible;
+            transition:  opacity 0.3s ease;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: inherit;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            background: linear-gradient(0deg, rgba(65, 0, 148, 0.15), rgba(65, 0, 148, 0.15)), linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
+            transition:  all 0.3s ease;
+        }
 
         &:before {
             content: '';
@@ -235,11 +317,11 @@ select:-webkit-autofill:focus {
             bottom: 0;
             left: 0;
             z-index: -1;
-            margin: -$border;
-            /* !importanté */
             border-radius: inherit;
-            /* !importanté */
             background: linear-gradient(to right, rgba(51, 227, 238, 1), rgba(201, 158, 255, 1), rgba(255, 148, 251, 1));
+            transition:  all 0.3s ease;
+            visibility: visible;
+            opacity: 1;
         }
 
         span {
@@ -247,13 +329,11 @@ select:-webkit-autofill:focus {
             background: linear-gradient(to right, rgba(51, 227, 238, 1), rgba(201, 158, 255, 1), rgba(255, 148, 251, 1));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 5;
+            transition:  all 0.3s ease;
         }
 
-        @media (min-width: (768px)) {
-            &:hover {
-                box-shadow: rgba(var(--primaryy-color), 0.9) 0px 0px 20px 0px;
-            }
-        }
     }
 
     &--transparent {
@@ -299,7 +379,7 @@ select:-webkit-autofill:focus {
     background-size: 41px;
 }
 
-.fx {
+.show {
     transform: translateY(4rem);
     opacity: 0;
     will-change: transform;
@@ -308,7 +388,7 @@ select:-webkit-autofill:focus {
     transition-timing-function: ease-out;
 }
 
-.fx-left {
+.show-left {
     transform: translateX(-4rem);
     opacity: 0;
     will-change: transform;
@@ -317,14 +397,14 @@ select:-webkit-autofill:focus {
     transition-timing-function: ease-out;
 }
 
-.fx.is-inview {
+.show.is-inview {
     opacity: 1;
     pointer-events: auto;
     transform: none;
     transition-delay: .3s;
 }
 
-.fx-left.is-inview {
+.show-left.is-inview {
     opacity: 1;
     pointer-events: auto;
     transform: none;
@@ -348,7 +428,7 @@ html.has-scroll-dragging {
     right: 0;
     top: 0;
     z-index: 99;
-    width: 6px;
+    width: 3px;
     height: 100vh;
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
