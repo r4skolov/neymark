@@ -52,7 +52,6 @@ body {
 }
 
 .site-container {
-
     overflow: hidden;
 }
 
@@ -74,6 +73,7 @@ body {
     margin: 0;
     min-width: 320px;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -89,10 +89,6 @@ img {
 }
 
 
-.is-hidden {
-    display: none !important;
-    /* stylelint-disable-line declaration-no-important */
-}
 
 .btn-reset {
     border: none;
@@ -313,6 +309,7 @@ select:-webkit-autofill:focus {
 
 
 
+
 html.has-scroll-dragging {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -322,11 +319,6 @@ html.has-scroll-dragging {
 
 .has-scroll-smooth body {
     overflow: hidden;
-}
-
-.has-scroll-smooth [data-scroll-container] {
-    min-height: 100vh;
-    
 }
 
 .c-scrollbar {

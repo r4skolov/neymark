@@ -18,7 +18,7 @@
         <div class="loader"></div>
     </div>
     <div class="site-container" data-scroll-container>
-        <header class="header">
+        <header class="header" data-scroll-section>
             <div class="container header__container">
                 <a href="#" class="logo">
                     <img src="img/logo.svg" alt="Logo">
@@ -54,8 +54,8 @@
                 </button>
             </div>
         </header>
-        <main class="main">
-            <section class="hero" >
+      
+            <section class="hero" data-scroll-section>
                 <div class="stars">
                     <span class="stars__item">
                         <img src="img/star.png" alt="">
@@ -89,7 +89,7 @@
                     <a href="#" class="btn btn-reset btn--white">Узнать больше</a>
                 </div>
             </section>
-            <section class="about" >
+            <section class="about" data-scroll-section>
                 <span class="gradient1"></span>
                 <div class="container about__container">
                     <div class="about__left fx" data-scroll>
@@ -108,7 +108,7 @@
                     </div>
                 </div>
             </section>
-            <section class="video" id="video">
+            <section class="video" id="video" data-scroll-section>
                 <div class="video-block">
                     <video preload="metadata"  class="video-block__item" muted playsinline loop data-scroll data-scroll-call="videoScroll">
                         <source type="video/mp4" src="img/1s.mp4">
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </section>
-            <section class="metaverse" id="test">
+            <section class="metaverse" id="test" data-scroll-section>
                 <div class="container metaverse__container">
                     <h2 class="section-title visually-hidden">Метавселенная</h2>
                     <div class="metaverse__left">
@@ -131,7 +131,7 @@
                     </div>
                     <div class="metaverse__right" >
                         <ul class="metaverse__list list-reset" >
-                            <li class="metaverse__item" id="high1" data-scroll data-scroll-delay="0.2" data-scroll-speed="1.5">
+                            <li class="metaverse__item" id="high1">
                                 <div id="sec1">
                                     <h3 class="metaverse__name">
                                         в 2023 году
@@ -141,7 +141,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="metaverse__item" id="high2" data-scroll data-scroll-delay="0.6" data-scroll-speed="2">
+                            <li class="metaverse__item" id="high2">
                                 <div id="sec2">
                                     <h3 class="metaverse__name active">
                                         Более 4000
@@ -151,7 +151,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="metaverse__item" id="high3"  data-scroll data-scroll-delay="0.8" data-scroll-speed="2.5">
+                            <li class="metaverse__item" id="high3">
                                 <div id="sec3">
                                     <h3 class="metaverse__name">
                                         Только на ЦИПР и ЦИПР TechWeek
@@ -165,7 +165,7 @@
                     </div>
                 </div>
             </section>
-            <section class="locations" id="locations" >
+            <section class="locations" id="locations" data-scroll-section>
                 <div class="map">
                     <div class="map__wrap">
                         <img src="img/locations_map.png" class="map__img" alt="">
@@ -256,7 +256,7 @@
                     </div>
                 </div>
             </section>
-            <section class="nft">
+            <section class="nft" data-scroll-section>
                 <video preload="metadata" autoplay muted playsinline loop class="nft__video">
                     <source type="video/mp4" src="img/nft-bg-video.mp4">
                 </video>
@@ -275,7 +275,7 @@
                     </div>
                 </div>
             </section>
-            <section class="pass" id="pass">
+            <section class="pass" id="pass" data-scroll-section>
                 <div class="container pass__container">
                     <div class="pass__left">
                         <div class="pass__head">
@@ -318,7 +318,7 @@
                     </div>
                 </div>
             </section>
-            <section class="merch" id="merch">
+            <section class="merch" id="merch" data-scroll-section>
                 <div class="merch__wrapper">
                     <div class="container merch__container">
                         <div class="merch__wrap">
@@ -352,7 +352,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
-            <section class="partners">
+            <section class="partners" data-scroll-section>
                 <div class="container partners__container">
                     <div class="partners__wrapper fx" data-scroll>
                         <h2 class="section-title partners__title">Хотите стать партнёром?</h2>
@@ -396,49 +396,49 @@
                         </form>
                     </div>
                 </div>
-            </section>
-            <footer class="footer">
-                <div class="container footer__container">
-                    <a href="#" class="footer__logo">
-                        <img src="img/logo.svg" class="logo" alt="">
-                    </a>
-                    <div class="footer__wrapper">
-                        <div class="footer__left">
-                            <div class="footer__group">
-                                <a href="tel:+79999999999" class="footer__link">+7 (999) 999-99-99</a>
-                                <a href="mailto:your@mail.com" class="footer__link">your@mail.com</a>
-                            </div>
-                            <div class="footer__group">
-                                <a href="#" class="footer__link">При поддержке Название организации</a>
-                                <a href="#" class="footer__link">Политика Конфиденциальности</a>
-                            </div>
+            </section>        
+
+        <footer class="footer" data-scroll-section data-scroll-repeat>
+            <div class="container footer__container">
+                <a href="#" class="footer__logo">
+                    <img src="img/logo.svg" class="logo" alt="">
+                </a>
+                <div class="footer__wrapper">
+                    <div class="footer__left">
+                        <div class="footer__group">
+                            <a href="tel:+79999999999" class="footer__link">+7 (999) 999-99-99</a>
+                            <a href="mailto:your@mail.com" class="footer__link">your@mail.com</a>
                         </div>
-                        <div class="footer__right">
-                            <ul class="socials list-reset">
-                                <li class="socials__item">
-                                    <a href="#" target="_blank">
-                                        <img src="img/vk.svg" alt="Vk">
-                                    </a>
-                                </li>
-                                <li class="socials__item">
-                                    <a href="#" target="_blank">
-                                        <img src="img/tg.svg" alt="Telegram">
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#" class="footer__link" target="_blank">Разработано в R-Top</a>
+                        <div class="footer__group">
+                            <a href="#" class="footer__link">При поддержке Название организации</a>
+                            <a href="#" class="footer__link">Политика Конфиденциальности</a>
                         </div>
                     </div>
+                    <div class="footer__right">
+                        <ul class="socials list-reset">
+                            <li class="socials__item">
+                                <a href="#" target="_blank">
+                                    <img src="img/vk.svg" alt="Vk">
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" target="_blank">
+                                    <img src="img/tg.svg" alt="Telegram">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="footer__link" target="_blank">Разработано в R-Top</a>
+                    </div>
                 </div>
-            </footer>
-        </main>
+            </div>
+        </footer>
        
     </div>
+    <script src="js/locomotive-scroll.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/ScrollMagic.min.js"></script>
     <script src="js/debug.addIndicators.min.js"></script>
     <script src="js/inputmask.min.js"></script>
-    <script src="js/locomotive-scroll.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
