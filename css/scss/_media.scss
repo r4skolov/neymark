@@ -690,6 +690,14 @@
         width: 40px;
         height: 24px;
     }
+
+    .video {
+        height: 100vh;
+    }
+
+    .video-block {
+        height: 100vh;
+    }
 }
 
 @media (min-width: (1440px)) {
@@ -772,10 +780,6 @@
         img {
             width: 100%;
         }
-    }
-
-    .video {
-        height: 100vh;
     }
 
     .video__title {

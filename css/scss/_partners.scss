@@ -207,18 +207,3 @@
     
 }
 
-.fx {
-    transform: translateY(4rem);
-    opacity: 0;
-    will-change: transform;
-    transition: .8s;
-    pointer-events: none;
-    transition-timing-function: ease-out;
-}
-
-.fx.is-inview {
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
-    transition-delay: .3s;
-}

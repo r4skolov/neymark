@@ -18,7 +18,7 @@
         <div class="loader"></div>
     </div>
     <div class="site-container" data-scroll-container>
-        <header class="header" data-scroll-section>
+        <header class="header" >
             <div class="container header__container">
                 <a href="#" class="logo">
                     <img src="img/logo.svg" alt="Logo">
@@ -54,7 +54,8 @@
                 </button>
             </div>
         </header>
-            <section class="hero" data-scroll-section>
+        <main>
+            <section class="hero" >
                 <div class="stars">
                     <span class="stars__item">
                         <img src="img/star.png" alt="">
@@ -88,7 +89,7 @@
                     <a href="#" class="btn btn-reset btn--white">Узнать больше</a>
                 </div>
             </section>
-            <section class="about" data-scroll-section>
+            <section class="about" >
                 <span class="gradient1"></span>
                 <div class="container about__container">
                     <div class="about__left fx" data-scroll>
@@ -107,7 +108,7 @@
                     </div>
                 </div>
             </section>
-            <section class="video" id="video" data-scroll-section  data-scroll-position="top">
+            <section class="video" id="video" >
                 <div class="video-block">
                     <video preload="metadata"  class="video-block__item" muted playsinline loop data-scroll data-scroll-call="videoScroll">
                         <source type="video/mp4" src="img/1s.mp4">
@@ -122,10 +123,10 @@
                     </div>
                 </div>
             </section>
-            <section class="metaverse" id="test" data-scroll-section>
+            <section class="metaverse" id="test" >
                 <div class="container metaverse__container">
                     <h2 class="section-title visually-hidden">Метавселенная</h2>
-                    <div class="metaverse__left">
+                    <div class="metaverse__left fx-left" data-scroll>
                         <img src="img/img_dib4.png" alt="">
                     </div>
                     <div class="metaverse__right" >
@@ -164,7 +165,7 @@
                     </div>
                 </div>
             </section>
-            <section class="locations" id="locations" data-scroll-section>
+            <section class="locations" id="locations" >
                 <div class="map">
                     <div class="map__wrap">
                         <img src="img/locations_map.png" class="map__img" alt="">
@@ -255,7 +256,7 @@
                     </div>
                 </div>
             </section>
-            <section class="nft" data-scroll-section>
+            <section class="nft" >
                 <video preload="metadata" autoplay muted playsinline loop class="nft__video">
                     <source type="video/mp4" src="img/nft-bg-video.mp4">
                 </video>
@@ -274,7 +275,7 @@
                     </div>
                 </div>
             </section>
-            <section class="pass" id="pass" data-scroll-position="top" data-scroll-section>
+            <section class="pass" id="pass" >
                 <div class="container pass__container">
                     <div class="pass__left">
                         <div class="pass__head">
@@ -311,13 +312,13 @@
                     <div class="pass__right">
                         <img class="pass__mobile" src="img/nft-pass.png" alt="">
                         <img class="pass__desktop" src="img/large-pass.png" alt="">
-                        <span class="small-pass" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3" data-scroll-offset="0%, 100%">
+                        <span class="small-pass" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2.5" data-scroll-offset="0%, 60%">
                             <img src="img/small-pass.png" alt="">
                         </span>
                     </div>
                 </div>
             </section>
-            <section class="merch" id="merch" data-scroll-section>
+            <section class="merch" id="merch" >
                 <div class="merch__wrapper">
                     <div class="container merch__container">
                         <div class="merch__wrap">
@@ -351,7 +352,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
-            <section class="partners" data-scroll-section>
+            <section class="partners" >
                 <div class="container partners__container">
                     <div class="partners__wrapper fx" data-scroll>
                         <h2 class="section-title partners__title">Хотите стать партнёром?</h2>
@@ -396,7 +397,8 @@
                     </div>
                 </div>
             </section>        
-        <footer class="footer" data-scroll-section data-scroll-position="bottom">
+        </main>
+        <footer class="footer">
             <div class="container footer__container">
                 <a href="#" class="footer__logo">
                     <img src="img/logo.svg" class="logo" alt="">
@@ -430,7 +432,6 @@
                 </div>
             </div>
         </footer>
-       
     </div>
     <script src="js/locomotive-scroll.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

@@ -299,15 +299,37 @@ select:-webkit-autofill:focus {
     background-size: 41px;
 }
 
-
-.smooth-scroll {
-    width: 100%;
-    overflow: hidden !important;
-    transition: .9s ease;
-    opacity: 1;
+.fx {
+    transform: translateY(4rem);
+    opacity: 0;
+    will-change: transform;
+    transition: .8s;
+    pointer-events: none;
+    transition-timing-function: ease-out;
 }
 
+.fx-left {
+    transform: translateX(-4rem);
+    opacity: 0;
+    will-change: transform;
+    transition: .8s;
+    pointer-events: none;
+    transition-timing-function: ease-out;
+}
 
+.fx.is-inview {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    transition-delay: .3s;
+}
+
+.fx-left.is-inview {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    transition-delay: .3s;
+}
 
 
 html.has-scroll-dragging {

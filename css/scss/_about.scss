@@ -42,7 +42,7 @@
    z-index: 1;
     width: 1355.36px;
     height: 997.59px;
-    animation: gradient 35s ease infinite;
+    animation: gradient 30s ease infinite;
     &::before {
         content: "";
         position: absolute;
@@ -130,7 +130,7 @@
 
     100% {
         transform: rotate(356deg);
-        top: 15%;
-        right: 0%;
+        top: 17%;
+        right: 3%;
     }
 }

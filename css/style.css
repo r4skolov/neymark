@@ -377,12 +377,46 @@ select:-webkit-autofill:focus {
   background-size: 41px;
 }
 
-.smooth-scroll {
-  width: 100%;
-  overflow: hidden !important;
-  -webkit-transition: .9s ease;
-  transition: .9s ease;
+.fx {
+  -webkit-transform: translateY(4rem);
+          transform: translateY(4rem);
+  opacity: 0;
+  will-change: transform;
+  -webkit-transition: .8s;
+  transition: .8s;
+  pointer-events: none;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.fx-left {
+  -webkit-transform: translateX(-4rem);
+          transform: translateX(-4rem);
+  opacity: 0;
+  will-change: transform;
+  -webkit-transition: .8s;
+  transition: .8s;
+  pointer-events: none;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.fx.is-inview {
   opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.fx-left.is-inview {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
 }
 
 html.has-scroll-dragging {
@@ -918,8 +952,8 @@ html.has-scroll-dragging {
   z-index: 1;
   width: 1355.36px;
   height: 997.59px;
-  -webkit-animation: gradient 35s ease infinite;
-          animation: gradient 35s ease infinite;
+  -webkit-animation: gradient 30s ease infinite;
+          animation: gradient 30s ease infinite;
 }
 
 .gradient1::before {
@@ -1008,8 +1042,8 @@ html.has-scroll-dragging {
   100% {
     -webkit-transform: rotate(356deg);
             transform: rotate(356deg);
-    top: 15%;
-    right: 0%;
+    top: 17%;
+    right: 3%;
   }
 }
 
@@ -1067,8 +1101,8 @@ html.has-scroll-dragging {
   100% {
     -webkit-transform: rotate(356deg);
             transform: rotate(356deg);
-    top: 15%;
-    right: 0%;
+    top: 17%;
+    right: 3%;
   }
 }
 
@@ -1859,27 +1893,6 @@ html.has-scroll-dragging {
   padding-left: 12px;
 }
 
-.fx {
-  -webkit-transform: translateY(4rem);
-          transform: translateY(4rem);
-  opacity: 0;
-  will-change: transform;
-  -webkit-transition: .8s;
-  transition: .8s;
-  pointer-events: none;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-}
-
-.fx.is-inview {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: none;
-          transform: none;
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
-}
-
 .footer {
   padding-top: 64px;
   padding-bottom: 42px;
@@ -2560,6 +2573,12 @@ html.has-scroll-dragging {
     width: 40px;
     height: 24px;
   }
+  .video {
+    height: 100vh;
+  }
+  .video-block {
+    height: 100vh;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -2627,9 +2646,6 @@ html.has-scroll-dragging {
   }
   .about__right img {
     width: 100%;
-  }
-  .video {
-    height: 100vh;
   }
   .video__title {
     font-size: 64px;
