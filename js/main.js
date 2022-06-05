@@ -191,16 +191,17 @@ document.addEventListener("DOMContentLoaded", () => {
   
   videoScroll();
 
- 
-    const scroll = new LocomotiveScroll({
+
+    const scroller = new LocomotiveScroll({
       el: document.querySelector('[data-scroll-container]'),
       smooth: true,
     });
-    scroll.on('scroll', (videoScroll) => {
+    
+    scroller.on('scroll', (videoScroll) => {
      
       var windowHeight = window.innerHeight,
       videoEl = document.querySelectorAll('.video-block__item');
-        if ((videoScroll.scroll.y) >= 1500) {
+        if ((videoScroll.scroll.y) >= 0) {
           
           for (var i = 0; i < videoEl.length; i++) {
       
@@ -213,10 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
               thisVideoEl.pause();
             }
-      
           }
-
         } 
     });
-
+    scroller.update();
 });

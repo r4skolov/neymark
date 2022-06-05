@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="ru" class="page" data-direction>
 
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,6 @@
                 </button>
             </div>
         </header>
-      
             <section class="hero" data-scroll-section>
                 <div class="stars">
                     <span class="stars__item">
@@ -108,7 +107,7 @@
                     </div>
                 </div>
             </section>
-            <section class="video" id="video" data-scroll-section>
+            <section class="video" id="video" data-scroll-section  data-scroll-position="top">
                 <div class="video-block">
                     <video preload="metadata"  class="video-block__item" muted playsinline loop data-scroll data-scroll-call="videoScroll">
                         <source type="video/mp4" src="img/1s.mp4">
@@ -275,7 +274,7 @@
                     </div>
                 </div>
             </section>
-            <section class="pass" id="pass" data-scroll-section>
+            <section class="pass" id="pass" data-scroll-position="top" data-scroll-section>
                 <div class="container pass__container">
                     <div class="pass__left">
                         <div class="pass__head">
@@ -397,8 +396,7 @@
                     </div>
                 </div>
             </section>        
-
-        <footer class="footer" data-scroll-section data-scroll-repeat>
+        <footer class="footer" data-scroll-section data-scroll-position="bottom">
             <div class="container footer__container">
                 <a href="#" class="footer__logo">
                     <img src="img/logo.svg" class="logo" alt="">

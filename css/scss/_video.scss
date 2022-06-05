@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column-reverse;
     padding-top: 72px;
-
+  
     &::after {
         content: "";
         position: absolute;
@@ -47,7 +47,7 @@
 }
 
 .video-block {
-   
+    
     &__item {
         position: static;
         top: 0;

@@ -94,6 +94,7 @@ body {
   margin: 0;
   min-width: 320px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -107,11 +108,6 @@ img {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.is-hidden {
-  display: none !important;
-  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -2631,6 +2627,9 @@ html.has-scroll-dragging {
   }
   .about__right img {
     width: 100%;
+  }
+  .video {
+    height: 100vh;
   }
   .video__title {
     font-size: 64px;
