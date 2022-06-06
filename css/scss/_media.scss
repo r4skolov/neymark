@@ -151,14 +151,38 @@
         padding: 120px 0;
     }
 
+    .metaverse__container {
+        // flex-direction: row;
+    }
+
     .metaverse__right {
         display: flex;
         justify-content: flex-end;
+        width: 100%;
+    }
+
+    .metaverse__left {
+        width: 100%;
     }
 
     .metaverse__left img {
         width: 60%;
         top: -155px;
+    }
+
+    .metaverse__right .swiper {
+        margin-left:0;
+        margin-right:0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .metaverse__swiper .swiper-wrapper{
+        max-width: 332px;
+    }
+
+    .metaverse__swiper .swiper-slide {
+        margin-bottom: 47px;
     }
 
     .metaverse__list {
@@ -498,17 +522,32 @@
         color: #454557;
     }
 
-    .metaverse__item.active .metaverse__name {
+    .metaverse__swiper {
+        height: 750px;
+    }
+
+    .metaverse__swiper .swiper-wrapper{
+        max-width: 100%;
+    }
+
+    .metaverse__swiper .swiper-slide {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .metaverse__swiper .swiper-slide-active .metaverse__name{
         background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
-    }
+    }   
 
-    .metaverse__item.active .metaverse__text {
+    .metaverse__swiper .swiper-slide-active .metaverse__text{
         color: var(--white-color);
-    }
+    }   
+
+
 
     .locations {
         min-height: 100vh;
@@ -812,6 +851,9 @@
     .metaverse__item {
         margin-bottom: 121px;
     }
+
+    
+
     
     .pass {
         padding: 180px 0;

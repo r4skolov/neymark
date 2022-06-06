@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="page" data-direction>
+<html lang="ru" class="page">
 
 <head>
     <meta charset="UTF-8">
@@ -55,7 +55,7 @@
             </div>
         </header>
         <main>
-            <section class="hero" >
+             <section class="hero" >
                 <div class="stars">
                     <span class="stars__item">
                         <img src="img/star.png" alt="">
@@ -128,11 +128,39 @@
             <section class="metaverse" id="test" >
                 <div class="container metaverse__container">
                     <h2 class="section-title visually-hidden">Метавселенная</h2>
-                    <div class="metaverse__left show-left" data-scroll>
+                    <div class="metaverse__left " data-scroll>
                         <img src="img/img_dib4.png" alt="">
                     </div>
                     <div class="metaverse__right" >
-                        <ul class="metaverse__list list-reset" >
+                        <div class="swiper js-metaverse-slider metaverse__swiper"  data-mobile="false">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3 class="metaverse__name">
+                                        в 2023 году
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Открытие первых программ обучения
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="metaverse__name active">
+                                        Более 4000
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Образовательных учреждений России уже имеют VR-оборудование
+                                    </p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3 class="metaverse__name">
+                                        Только на ЦИПР и ЦИПР TechWeek
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Образовательных учреждений России уже имеют VR-оборудование
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <ul class="metaverse__list list-reset" >
                             <li class="metaverse__item" id="high1">
                                 <div id="sec1">
                                     <h3 class="metaverse__name">
@@ -163,7 +191,7 @@
                                     </p>
                                 </div>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </section>
@@ -337,9 +365,7 @@
                     </div>
                 </div>
                 <div class="swiper merch__swiper">
-                    <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
-                        <!-- Slides -->
                         <div class="swiper-slide">
                             <img src="img/merch.jpg" alt="">
                         </div>
@@ -350,7 +376,6 @@
                             <img src="img/merch.jpg" alt="">
                         </div>
                     </div>
-                    <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-pagination"></div>

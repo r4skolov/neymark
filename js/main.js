@@ -14,6 +14,50 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
+  // const swiperVert = new Swiper('.metaverse__swiper', {
+  //   direction: "vertical",
+  //   slidesPerView: 3,
+  //   spaceBetween: 0,
+  //   mousewheel: true,
+  //   loop: false,
+  // });
+
+  const swiperVert = document.querySelector('.js-metaverse-slider');
+
+  let mySwiper;
+
+  function mobileSwiper() {
+    if(swiperVert) {
+      if (window.innerWidth >= 1024 && swiperVert.dataset.mobile == 'false') {
+        mySwiper = new Swiper (swiperVert, {
+          direction: "vertical",
+          slidesPerView: 3,
+          spaceBetween: 0,
+          centeredSlides: true,
+          mousewheel: true,
+          loop: true,
+        });
+        swiperVert.dataset.mobile = 'true';
+      }
+
+      if (window.innerWidth < 1024) {
+        swiperVert.dataset.mobile = 'false';
+    
+        if (swiperVert.classList.contains('swiper-initialized')) {
+          mySwiper.destroy();
+        }
+      }
+    }
+  
+  
+  };
+  
+  mobileSwiper();
+  
+  window.addEventListener('resize', () => {
+    mobileSwiper();
+  });
+
  
 
   // бургер меню
@@ -93,22 +137,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
  //скролл в секции metaverse 
-	var controller = new ScrollMagic.Controller({globalSceneOptions: {
-    duration: 250,
-  }});
+	// var controller = new ScrollMagic.Controller({globalSceneOptions: {
+  //   duration: 250,
+  // }});
 
-	new ScrollMagic.Scene({triggerElement: "#sec1"})
-					.setClassToggle("#high1", "active")
-					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#sec2"})
-					.setClassToggle("#high2", "active") 
-					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#sec3"})
-					.setClassToggle("#high3", "active") 
-					.addTo(controller);
-	new ScrollMagic.Scene({triggerElement: "#sec4"})
-					.setClassToggle("#high4", "active")
-					.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#sec1"})
+	// 				.setClassToggle("#high1", "active")
+	// 				.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#sec2"})
+	// 				.setClassToggle("#high2", "active") 
+	// 				.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#sec3"})
+	// 				.setClassToggle("#high3", "active") 
+	// 				.addTo(controller);
+	// new ScrollMagic.Scene({triggerElement: "#sec4"})
+	// 				.setClassToggle("#high4", "active")
+	// 				.addTo(controller);
 
 
   const form = document.querySelector('.form');

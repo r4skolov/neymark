@@ -523,7 +523,7 @@ html.has-scroll-dragging {
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   opacity: 1;
   mix-blend-mode: difference;
-  background-color: #6B30AB;
+  background-color: #6c30ab5d;
 }
 
 .c-scrollbar:hover {
@@ -1317,6 +1317,33 @@ html.has-scroll-dragging {
   line-height: 20px;
   max-width: 490px;
   color: var(--white-color);
+}
+
+.metaverse__swiper .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.metaverse__swiper .swiper-slide {
+  margin-bottom: 32px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  cursor: pointer;
 }
 
 .locations {
@@ -2184,10 +2211,30 @@ html.has-scroll-dragging {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    width: 100%;
+  }
+  .metaverse__left {
+    width: 100%;
   }
   .metaverse__left img {
     width: 60%;
     top: -155px;
+  }
+  .metaverse__right .swiper {
+    margin-left: 0;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .metaverse__swiper .swiper-wrapper {
+    max-width: 332px;
+  }
+  .metaverse__swiper .swiper-slide {
+    margin-bottom: 47px;
   }
   .metaverse__list {
     max-width: 331px;
@@ -2490,14 +2537,25 @@ html.has-scroll-dragging {
     line-height: 34px;
     color: #454557;
   }
-  .metaverse__item.active .metaverse__name {
+  .metaverse__swiper {
+    height: 750px;
+  }
+  .metaverse__swiper .swiper-wrapper {
+    max-width: 100%;
+  }
+  .metaverse__swiper .swiper-slide {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  .metaverse__swiper .swiper-slide-active .metaverse__name {
     background: linear-gradient(92.44deg, #33E3EE 4.29%, #C99EFF 50.91%, #FF94FB 99.52%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
   }
-  .metaverse__item.active .metaverse__text {
+  .metaverse__swiper .swiper-slide-active .metaverse__text {
     color: var(--white-color);
   }
   .locations {
