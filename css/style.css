@@ -812,7 +812,7 @@ html.has-scroll-dragging {
 
 .stars__item-3 {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 45%;
   z-index: 1;
   -webkit-animation: stars3 15s ease infinite;
@@ -828,28 +828,30 @@ html.has-scroll-dragging {
   z-index: 1;
   -webkit-animation: stars4 25s ease infinite;
           animation: stars4 25s ease infinite;
-}
-
-.stars__item-5 {
-  position: absolute;
-  top: 60%;
-  right: 25%;
-  z-index: 1;
-  -webkit-animation: stars5 25s ease infinite;
-          animation: stars5 25s ease infinite;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
 }
 
+.stars__item-5 {
+  position: absolute;
+  top: 10%;
+  right: 45%;
+  z-index: 1;
+  -webkit-animation: stars5 15s ease infinite;
+          animation: stars5 15s ease infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
 .stars__item-6 {
   position: absolute;
-  top: 40%;
-  right: 45%;
+  top: 25%;
+  right: 15%;
   z-index: 1;
   -webkit-animation: stars6 15s ease infinite;
           animation: stars6 15s ease infinite;
-  -webkit-animation-delay: 10s;
-          animation-delay: 10s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .stars__item-7 {
@@ -857,6 +859,10 @@ html.has-scroll-dragging {
   top: 0%;
   right: 35%;
   z-index: 1;
+  -webkit-animation: stars7 20s ease infinite;
+          animation: stars7 20s ease infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 @-webkit-keyframes stars1 {
@@ -905,7 +911,7 @@ html.has-scroll-dragging {
 
 @-webkit-keyframes stars3 {
   0% {
-    top: 20%;
+    top: 15%;
     opacity: 1;
   }
   100% {
@@ -916,7 +922,7 @@ html.has-scroll-dragging {
 
 @keyframes stars3 {
   0% {
-    top: 20%;
+    top: 15%;
     opacity: 1;
   }
   100% {
@@ -927,55 +933,89 @@ html.has-scroll-dragging {
 
 @-webkit-keyframes stars4 {
   0% {
+    top: 20%;
     opacity: 1;
   }
   100% {
+    top: 85%;
     opacity: 0;
   }
 }
 
 @keyframes stars4 {
   0% {
+    top: 20%;
     opacity: 1;
   }
   100% {
+    top: 85%;
     opacity: 0;
   }
 }
 
 @-webkit-keyframes stars5 {
   0% {
+    top: 10%;
     opacity: 1;
   }
   100% {
     opacity: 0;
+    top: 55%;
   }
 }
 
 @keyframes stars5 {
   0% {
+    top: 10%;
     opacity: 1;
   }
   100% {
     opacity: 0;
+    top: 55%;
   }
 }
 
 @-webkit-keyframes stars6 {
   0% {
+    top: 25%;
     opacity: 1;
   }
   100% {
     opacity: 0;
+    top: 55%;
   }
 }
 
 @keyframes stars6 {
   0% {
+    top: 25%;
     opacity: 1;
   }
   100% {
     opacity: 0;
+    top: 55%;
+  }
+}
+
+@-webkit-keyframes stars7 {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
+  }
+}
+
+@keyframes stars7 {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100%;
   }
 }
 
@@ -1344,6 +1384,11 @@ html.has-scroll-dragging {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   cursor: pointer;
+}
+
+.test1 {
+  width: 50%;
+  height: 100%;
 }
 
 .locations {
@@ -2503,6 +2548,7 @@ html.has-scroll-dragging {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    overflow: hidden;
   }
   .metaverse__left {
     width: 50%;
@@ -2516,6 +2562,7 @@ html.has-scroll-dragging {
   .metaverse__left img {
     width: 100%;
     top: 0;
+    left: 0;
   }
   .metaverse__list {
     max-width: 100%;
@@ -2538,7 +2585,10 @@ html.has-scroll-dragging {
     color: #454557;
   }
   .metaverse__swiper {
-    height: 750px;
+    height: 250px;
+  }
+  .metaverse__right .swiper {
+    overflow: visible;
   }
   .metaverse__swiper .swiper-wrapper {
     max-width: 100%;
@@ -2791,9 +2841,6 @@ html.has-scroll-dragging {
   }
   .metaverse__left {
     width: 60%;
-  }
-  .metaverse__right {
-    padding-top: 64px;
   }
   .metaverse__name {
     font-size: 64px;

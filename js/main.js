@@ -21,43 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //   mousewheel: true,
   //   loop: false,
   // });
-
-  const swiperVert = document.querySelector('.js-metaverse-slider');
-
-  let mySwiper;
-
-  function mobileSwiper() {
-    if(swiperVert) {
-      if (window.innerWidth >= 1024 && swiperVert.dataset.mobile == 'false') {
-        mySwiper = new Swiper (swiperVert, {
-          direction: "vertical",
-          slidesPerView: 3,
-          spaceBetween: 0,
-          centeredSlides: true,
-          mousewheel: true,
-          loop: true,
-        });
-        swiperVert.dataset.mobile = 'true';
-      }
-
-      if (window.innerWidth < 1024) {
-        swiperVert.dataset.mobile = 'false';
-    
-        if (swiperVert.classList.contains('swiper-initialized')) {
-          mySwiper.destroy();
-        }
-      }
-    }
-  
-  
-  };
-  
-  mobileSwiper();
-  
-  window.addEventListener('resize', () => {
-    mobileSwiper();
-  });
-
  
 
   // бургер меню
@@ -242,7 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
     
     scroller.on('scroll', (videoScroll) => {
-     
       var windowHeight = window.innerHeight,
       videoEl = document.querySelectorAll('.video-block__item');
         if ((videoScroll.scroll.y) >= 0) {
@@ -259,9 +221,64 @@ document.addEventListener("DOMContentLoaded", () => {
               thisVideoEl.pause();
             }
           }
-        } 
+        }
     });
-    scroller.update();
+
+
+  const swiperVert = document.querySelector('.js-metaverse-slider');
+
+  let mySwiper;
+  const body = document.querySelector('.page__body');
+  function mobileSwiper() {
+    if(swiperVert) {
+      if (window.innerWidth >= 1024 && swiperVert.dataset.mobile == 'false') {
+        mySwiper = new Swiper (swiperVert, {
+          direction: "vertical",
+          slidesPerView: 1,
+          spaceBetween: 0,
+          speed: 700,
+          centeredSlides: true,
+          mousewheel: true,
+          loop: false,
+        });
+        swiperVert.dataset.mobile = 'true';
+        // mySwiper.on('slideChange', function () {
+        //    if (swiperVert.classList.contains('swiper')) {
+        //       scroller.stop();
+        //    }
+        // });
+      }
+
+      if (window.innerWidth < 1024) {
+        swiperVert.dataset.mobile = 'false';
+    
+        if (swiperVert.classList.contains('swiper-initialized')) {
+          mySwiper.destroy();
+        }
+      }
+    }
   
+  };
+
+ 
+  mobileSwiper();
+  
+  window.addEventListener('resize', () => {
+    mobileSwiper();
+  });
+
+
+  container.onmouseover = container.onmouseout = handler;
+
+  function handler(event) {
+  
+    if (event.type == 'mouseover') {
+      scroller.stop();
+    }
+    if (event.type == 'mouseout') {
+      scroller.start();
+    }
+  }
+
  
 });

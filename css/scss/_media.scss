@@ -481,6 +481,7 @@
     .metaverse__container {
         flex-direction: row;
         align-items: center;
+        overflow: hidden;
     }
 
     .metaverse__left {
@@ -495,6 +496,7 @@
     .metaverse__left img {
         width: 100%;
         top: 0;
+        left: 0;
     }
 
     .metaverse__list {
@@ -523,7 +525,11 @@
     }
 
     .metaverse__swiper {
-        height: 750px;
+        height: 250px;
+    }
+
+    .metaverse__right .swiper{
+        overflow: visible;
     }
 
     .metaverse__swiper .swiper-wrapper{
@@ -829,12 +835,14 @@
         padding: 180px 0;
     }
 
+    
+
     .metaverse__left {
         width: 60%;
     }
 
     .metaverse__right {
-        padding-top: 64px;
+        
     }
 
     .metaverse__name {

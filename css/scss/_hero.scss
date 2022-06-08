@@ -62,7 +62,7 @@
 
     &__item-3 {
         position: absolute;
-        top: 20%;
+        top: 15%;
         left: 45%;
         z-index: 1;
         animation: stars3 15s ease infinite;
@@ -75,25 +75,25 @@
         right: 25%;
         z-index: 1;
         animation: stars4 25s ease infinite;
-        // animation-delay: 6s;
+        animation-delay: 6s;
     }
 
     &__item-5 {
         position: absolute;
-        top: 60%;
-        right: 25%;
+        top: 10%;
+        right: 45%;
         z-index: 1;
-        animation: stars5 25s ease infinite;
-        animation-delay: 6s;
+        animation: stars5 15s ease infinite;
+        animation-delay: 3s;
     }
 
     &__item-6 {
         position: absolute;
-        top: 40%;
-        right: 45%;
+        top: 25%;
+        right: 15%;
         z-index: 1;
         animation: stars6 15s ease infinite;
-        animation-delay: 10s;
+        animation-delay: 1s;
     }
 
     &__item-7 {
@@ -101,6 +101,8 @@
         top: 0%;
         right: 35%;
         z-index: 1;
+        animation: stars7 20s ease infinite;
+        animation-delay: 1s;
     }
 }
 
@@ -136,7 +138,7 @@
 
 @keyframes stars3 {
     0% {
-        top: 20%;
+        top: 15%;
         opacity: 1;
     }
 
@@ -149,33 +151,52 @@
 
 @keyframes stars4 {
     0% {
+        top: 20%;
         opacity: 1;
     }
 
 
     100% {
+        top: 85%;
         opacity: 0;
     }
 }
 
 @keyframes stars5 {
     0% {
+        top: 10%;
         opacity: 1;
     }
 
 
     100% {
         opacity: 0;
+        top: 55%;
     }
 }
 
 @keyframes stars6 {
     0% {
+        top: 25%;
         opacity: 1;
     }
 
 
     100% {
         opacity: 0;
+        top: 55%;
+    }
+}
+
+@keyframes stars7 {
+    0% {
+        top: 0%;
+        opacity: 1;
+    }
+
+
+    100% {
+        opacity: 0;
+        top: 100%;
     }
 }
