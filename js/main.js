@@ -14,14 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // const swiperVert = new Swiper('.metaverse__swiper', {
-  //   direction: "vertical",
-  //   slidesPerView: 3,
-  //   spaceBetween: 0,
-  //   mousewheel: true,
-  //   loop: false,
-  // });
- 
 
   // бургер меню
   function disableScroll() {
@@ -126,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputTel = form.querySelector('#partners-phone');
   const inputArea = form.querySelector('#partners-massage');
   const checkbox = form.querySelector('#partners-checkbox');
-  const formGroup = form.querySelectorAll('.test');
+  const formGroup = form.querySelectorAll('.js-valid');
   
 
   const validateBtn = form.querySelector('button[type="submit"]');
@@ -167,12 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   preloader();
 
-    
-  //  scroll к секции
-  //  const scroLL = new SmoothScroll('a[href*="#"]', {
-  //   speed: 300,
-  //   ignore: '[data-scroll-to]',
-  // });
+
  
   window.addEventListener('scroll', videoScroll);
        
@@ -201,14 +188,14 @@ document.addEventListener("DOMContentLoaded", () => {
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
     smartphone: {smooth: false},
-    tablet: {smooth: true}
-  });
+    tablet: {smooth: true},
     
-    scroller.on('scroll', (videoScroll) => {
+  });
+
+    
+    scroller.on('scroll', () => {
       var windowHeight = window.innerHeight,
       videoEl = document.querySelectorAll('.video-block__item');
-        if ((videoScroll.scroll.y) >= 0) {
-          
           for (var i = 0; i < videoEl.length; i++) {
       
             var thisVideoEl = videoEl[i],
@@ -221,14 +208,20 @@ document.addEventListener("DOMContentLoaded", () => {
               thisVideoEl.pause();
             }
           }
-        }
+        
     });
+
+
+    // scroller.on('call', args => {
+
+    //   scroller.stop();
+      
+    // })
 
 
   const swiperVert = document.querySelector('.js-metaverse-slider');
 
   let mySwiper;
-  const body = document.querySelector('.page__body');
   function mobileSwiper() {
     if(swiperVert) {
       if (window.innerWidth >= 1024 && swiperVert.dataset.mobile == 'false') {
@@ -240,13 +233,20 @@ document.addEventListener("DOMContentLoaded", () => {
           centeredSlides: true,
           mousewheel: true,
           loop: false,
+          on: {
+            slideChangeTransitionEnd: function () {
+              console.log('changed')
+              console.log(mySwiper.isEnd)
+              if (mySwiper.isEnd) {
+                setTimeout(function () {
+                  
+                }, 1000)
+              }
+            }
+          }
         });
         swiperVert.dataset.mobile = 'true';
-        // mySwiper.on('slideChange', function () {
-        //    if (swiperVert.classList.contains('swiper')) {
-        //       scroller.stop();
-        //    }
-        // });
+       
       }
 
       if (window.innerWidth < 1024) {
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  container.onmouseover = container.onmouseout = handler;
+  scrollStop.onmouseover = scrollStop.onmouseout = handler;
 
   function handler(event) {
   
@@ -279,6 +279,5 @@ document.addEventListener("DOMContentLoaded", () => {
       scroller.start();
     }
   }
-
  
 });
