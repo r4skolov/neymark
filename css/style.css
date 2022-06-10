@@ -837,10 +837,10 @@ html.has-scroll-dragging {
   top: 10%;
   right: 45%;
   z-index: 1;
-  -webkit-animation: stars5 15s ease infinite;
-          animation: stars5 15s ease infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: stars5 8s ease infinite;
+          animation: stars5 8s ease infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .stars__item-6 {
@@ -848,10 +848,10 @@ html.has-scroll-dragging {
   top: 25%;
   right: 15%;
   z-index: 1;
-  -webkit-animation: stars6 15s ease infinite;
-          animation: stars6 15s ease infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: stars6 10s ease infinite;
+          animation: stars6 10s ease infinite;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
 }
 
 .stars__item-7 {
@@ -859,10 +859,10 @@ html.has-scroll-dragging {
   top: 0%;
   right: 35%;
   z-index: 1;
-  -webkit-animation: stars7 20s ease infinite;
-          animation: stars7 20s ease infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation: stars7 12s ease infinite;
+          animation: stars7 12s ease infinite;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
 }
 
 @-webkit-keyframes stars1 {
@@ -933,89 +933,73 @@ html.has-scroll-dragging {
 
 @-webkit-keyframes stars4 {
   0% {
-    top: 20%;
     opacity: 1;
   }
   100% {
-    top: 85%;
     opacity: 0;
   }
 }
 
 @keyframes stars4 {
   0% {
-    top: 20%;
     opacity: 1;
   }
   100% {
-    top: 85%;
     opacity: 0;
   }
 }
 
 @-webkit-keyframes stars5 {
   0% {
-    top: 10%;
     opacity: 1;
   }
   100% {
     opacity: 0;
-    top: 55%;
   }
 }
 
 @keyframes stars5 {
   0% {
-    top: 10%;
     opacity: 1;
   }
   100% {
     opacity: 0;
-    top: 55%;
   }
 }
 
 @-webkit-keyframes stars6 {
   0% {
-    top: 25%;
     opacity: 1;
   }
   100% {
     opacity: 0;
-    top: 55%;
   }
 }
 
 @keyframes stars6 {
   0% {
-    top: 25%;
     opacity: 1;
   }
   100% {
     opacity: 0;
-    top: 55%;
   }
 }
 
 @-webkit-keyframes stars7 {
   0% {
-    top: 0%;
     opacity: 1;
   }
   100% {
     opacity: 0;
-    top: 100%;
   }
 }
 
 @keyframes stars7 {
   0% {
-    top: 0%;
     opacity: 1;
   }
   100% {
     opacity: 0;
-    top: 100%;
   }
 }
 

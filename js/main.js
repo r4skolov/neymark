@@ -212,13 +212,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // scroller.on('call', args => {
-
-    //   scroller.stop();
-      
-    // })
-
-
   const swiperVert = document.querySelector('.js-metaverse-slider');
 
   let mySwiper;
