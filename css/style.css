@@ -432,6 +432,26 @@ select:-webkit-autofill:focus {
   color: var(--purple-color);
 }
 
+.btn-top {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.btn-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
 .section-title {
   font-family: 'Tektur';
   font-style: normal;
@@ -479,6 +499,18 @@ select:-webkit-autofill:focus {
           transition-timing-function: ease-out;
 }
 
+.show-right {
+  -webkit-transform: translateX(4rem);
+          transform: translateX(4rem);
+  opacity: 0;
+  will-change: transform;
+  -webkit-transition: .8s;
+  transition: .8s;
+  pointer-events: none;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
 .show.is-inview {
   opacity: 1;
   pointer-events: auto;
@@ -497,6 +529,15 @@ select:-webkit-autofill:focus {
           transition-delay: .3s;
 }
 
+.show-right.is-inview {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transition-delay: .3s;
+  transition-delay: .3s;
+}
+
 html.has-scroll-dragging {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -513,7 +554,7 @@ html.has-scroll-dragging {
   right: 0;
   top: 0;
   z-index: 99;
-  width: 3px;
+  width: 1px !important;
   height: 100vh;
   -webkit-transform-origin: center right;
           transform-origin: center right;
@@ -541,9 +582,9 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #fff;
+  background-color: #fff !important;
   opacity: 1;
-  width: 3px;
+  width: 1px !important;
   border-radius: 20px;
   margin: 4px;
   cursor: -webkit-grab;
@@ -856,7 +897,7 @@ html.has-scroll-dragging {
 
 .stars__item-7 {
   position: absolute;
-  top: 0%;
+  top: 15%;
   right: 35%;
   z-index: 1;
   -webkit-animation: stars7 12s ease infinite;
@@ -933,72 +974,88 @@ html.has-scroll-dragging {
 
 @-webkit-keyframes stars4 {
   0% {
+    top: 30%;
     opacity: 1;
   }
   100% {
+    top: 80%;
     opacity: 0;
   }
 }
 
 @keyframes stars4 {
   0% {
+    top: 30%;
     opacity: 1;
   }
   100% {
+    top: 80%;
     opacity: 0;
   }
 }
 
 @-webkit-keyframes stars5 {
   0% {
+    top: 10%;
     opacity: 1;
   }
   100% {
+    top: 60%;
     opacity: 0;
   }
 }
 
 @keyframes stars5 {
   0% {
+    top: 10%;
     opacity: 1;
   }
   100% {
+    top: 60%;
     opacity: 0;
   }
 }
 
 @-webkit-keyframes stars6 {
   0% {
+    top: 25%;
     opacity: 1;
   }
   100% {
+    top: 95%;
     opacity: 0;
   }
 }
 
 @keyframes stars6 {
   0% {
+    top: 25%;
     opacity: 1;
   }
   100% {
+    top: 95%;
     opacity: 0;
   }
 }
 
 @-webkit-keyframes stars7 {
   0% {
+    top: 15%;
     opacity: 1;
   }
   100% {
+    top: 95%;
     opacity: 0;
   }
 }
 
 @keyframes stars7 {
   0% {
+    top: 15%;
     opacity: 1;
   }
   100% {
+    top: 95%;
     opacity: 0;
   }
 }
@@ -1548,11 +1605,11 @@ html.has-scroll-dragging {
 .nft::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 5, 31, 0)), color-stop(0%, rgba(8, 5, 31, 0.692708)), to(#08051F));
   background: linear-gradient(180deg, rgba(8, 5, 31, 0) 0%, rgba(8, 5, 31, 0.692708) 0%, #08051F 100%);
   opacity: 0.6;
@@ -1775,7 +1832,7 @@ html.has-scroll-dragging {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: var(--white-color);
+  color: #8B8B96;
 }
 
 .merch__swiper .swiper-button-next::after, .merch__swiper .swiper-button-prev::after {
@@ -1808,8 +1865,8 @@ html.has-scroll-dragging {
   height: 10px;
   display: inline-block;
   border-radius: 50%;
-  background: transparent;
-  opacity: 0.5;
+  background: #8B8B96;
+  opacity: 0.8;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -1819,8 +1876,8 @@ html.has-scroll-dragging {
 }
 
 .merch__swiper .swiper-pagination-bullet-active {
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0.5;
+  background: rgb(139 129 129);
+  opacity: 1;
   border: 0;
 }
 
@@ -1850,49 +1907,8 @@ html.has-scroll-dragging {
   max-width: 573px;
 }
 
-.form--invalid .form__input {
-  border-bottom: 1px solid red;
-}
-
-.form--invalid .form__wrap {
+.form__group {
   position: relative;
-}
-
-.form--invalid .form__wrap::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 6px;
-  z-index: 1;
-  width: 23px;
-  height: 23px;
-  background-image: url("../img/warning.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.form--invalid .form__wrap--area::before {
-  top: 5px;
-}
-
-.form--invalid .custom-checkbox .custom-checkbox__content::before {
-  border-color: #FF2626;
-}
-
-.form--invalid .custom-checkbox .custom-checkbox__content::after {
-  border-color: #FF2626;
-}
-
-.form--invalid .custom-checkbox .custom-checkbox__text {
-  color: #FF2626;
-}
-
-.form--invalid .custom-checkbox__text a::before {
-  display: none;
-}
-
-.form--invalid .form__area {
-  border-color: #FF2626;
 }
 
 .form__body {
@@ -1916,7 +1932,7 @@ html.has-scroll-dragging {
   width: 100%;
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid var(--white-color);
+  border-bottom: 2px solid var(--white-color);
 }
 
 .form__input:focus-visible {
@@ -1932,7 +1948,7 @@ html.has-scroll-dragging {
 .form__area {
   width: 100%;
   background-color: transparent;
-  border: 1px solid var(--white-color);
+  border: 2px solid var(--white-color);
   resize: none;
 }
 
@@ -1989,9 +2005,10 @@ html.has-scroll-dragging {
   width: 20px;
   height: 20px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url("../img/cheked.svg");
   background-position: center;
-  background-size: 10px 10px;
+  background-size: 18px 16px;
   background-repeat: no-repeat;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -2001,7 +2018,6 @@ html.has-scroll-dragging {
 
 .custom-checkbox__field:checked + .custom-checkbox__content::after {
   opacity: 1;
-  background-color: var(--white-color);
 }
 
 .custom-checkbox__field:disabled + .custom-checkbox__content {
@@ -2025,6 +2041,35 @@ html.has-scroll-dragging {
   line-height: 30px;
   color: #FF2626;
   padding-left: 12px;
+}
+
+.js-validate-error-field {
+  border-bottom: 2px solid #FF2626 !important;
+}
+
+.form__label {
+  position: relative;
+}
+
+.js-validate-error-label {
+  font-size: 0 !important;
+  background-image: url("../img/warning.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  z-index: 1;
+}
+
+.just-validate-error-label {
+  color: #FF2626 !important;
+}
+
+.form__area.js-validate-error-field {
+  border: 2px solid #FF2626 !important;
 }
 
 .footer {
@@ -2129,6 +2174,12 @@ html.has-scroll-dragging {
 }
 
 @media (min-width: 768px) {
+  .btn-top {
+    width: 40px;
+    height: 40px;
+    right: 34px;
+    bottom: 34px;
+  }
   .header {
     padding-left: 24px;
     padding-right: 24px;
@@ -2291,10 +2342,8 @@ html.has-scroll-dragging {
     line-height: 125%;
   }
   .locations__list {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .locations__item {
     width: 70%;
@@ -2464,6 +2513,10 @@ html.has-scroll-dragging {
 }
 
 @media (min-width: 1024px) {
+  .btn-top {
+    right: 50px;
+    bottom: 50px;
+  }
   .btn {
     font-size: 24px;
     line-height: 30px;
@@ -2557,16 +2610,10 @@ html.has-scroll-dragging {
   .metaverse__name {
     font-size: 50px;
     margin-bottom: 20px;
-    background: #454557;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
   }
   .metaverse__text {
     font-size: 22px;
     line-height: 34px;
-    color: #454557;
   }
   .metaverse__swiper {
     height: 250px;
@@ -2631,8 +2678,7 @@ html.has-scroll-dragging {
     height: 15px;
   }
   .locations__list {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .locations__item {
     width: 100%;
@@ -2881,12 +2927,13 @@ html.has-scroll-dragging {
     width: auto;
   }
   .merch__wrapper {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 2;
-    padding-top: 50px;
+    padding-top: 50px; */
+    padding-bottom: 64px;
   }
   .merch__container {
     margin-bottom: 0;

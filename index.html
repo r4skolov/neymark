@@ -14,10 +14,15 @@
 </head>
 
 <body class="page__body scroll" >
+    <button type="button" class="btn-reset btn-top" id="goTop">
+        <img src="img/btnscrollup.png" alt="">
+    </button>
     <div class="preload">
         <div class="loader"></div>
     </div>
+   
     <div class="site-container" data-scroll-container>
+       
         <header class="header" >
             <div class="container header__container">
                 <a href="#" class="logo">
@@ -55,7 +60,7 @@
             </div>
         </header>
         <main>
-             <section class="hero" >
+             <section class="hero"  id="top" data-scroll>
                 <div class="stars">
                     <span class="stars__item">
                         <img src="img/star.png" alt="">
@@ -125,77 +130,43 @@
                     </div>
                 </div>
             </section>
-            <section class="metaverse"  data-scroll  data-scroll-call="args"  data-scroll-offset="100%,0%">
+            <section class="metaverse">
                     <div class="container metaverse__container">
                         <h2 class="section-title visually-hidden">Метавселенная</h2>
-                        <div class="metaverse__left " data-scroll>
+                        <div class="metaverse__left show-left" data-scroll>
                             <img src="img/img_dib4.png" alt="">
                         </div>
-                        <div class="metaverse__right" id="scrollStop">
-                            <div class="swiper js-metaverse-slider metaverse__swiper"  data-mobile="false" >
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <h3 class="metaverse__name">
-                                            в 2023 году
-                                        </h3>
-                                        <p class="metaverse__text">
-                                            Открытие первых программ обучения
-                                        </p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <h3 class="metaverse__name active">
-                                            Более 4000
-                                        </h3>
-                                        <p class="metaverse__text">
-                                            Образовательных учреждений России уже имеют VR-оборудование
-                                        </p>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <h3 class="metaverse__name">
-                                            Только на ЦИПР и ЦИПР TechWeek
-                                        </h3>
-                                        <p class="metaverse__text">
-                                            Образовательных учреждений России уже имеют VR-оборудование
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <ul class="metaverse__list list-reset" >
-                                <li class="metaverse__item" id="high1">
-                                    <div id="sec1">
-                                        <h3 class="metaverse__name">
-                                            в 2023 году
-                                        </h3>
-                                        <p class="metaverse__text">
-                                            Открытие первых программ обучения
-                                        </p>
-                                    </div>
+                        <div class="metaverse__right show-right" data-scroll>
+                            <ul class="metaverse__list list-reset" >
+                                <li class="metaverse__item">
+                                    <h3 class="metaverse__name">
+                                        в 2023 году
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Открытие первых программ обучения
+                                    </p>
                                 </li>
-                                <li class="metaverse__item" id="high2">
-                                    <div id="sec2">
-                                        <h3 class="metaverse__name active">
-                                            Более 4000
-                                        </h3>
-                                        <p class="metaverse__text">
-                                            Образовательных учреждений России уже имеют VR-оборудование
-                                        </p>
-                                    </div>
+                                <li class="metaverse__item">
+                                    <h3 class="metaverse__name">
+                                        Более 4000
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Образовательных учреждений России уже имеют VR-оборудование
+                                    </p>
                                 </li>
-                                <li class="metaverse__item" id="high3">
-                                    <div id="sec3">
-                                        <h3 class="metaverse__name">
-                                            Только на ЦИПР и ЦИПР TechWeek
-                                        </h3>
-                                        <p class="metaverse__text">
-                                            Образовательных учреждений России уже имеют VR-оборудование
-                                        </p>
-                                    </div>
+                                <li class="metaverse__item">
+                                    <h3 class="metaverse__name">
+                                        Только на ЦИПР и ЦИПР TechWeek
+                                    </h3>
+                                    <p class="metaverse__text">
+                                        Образовательных учреждений России уже имеют VR-оборудование
+                                    </p>
                                 </li>
-                            </ul> -->
+                            </ul>
                         </div>
                     </div>
             </section>
-            <section class="locations" id="locations" >
+            <section class="locations" id="locations">
                 <div class="map">
                     <div class="map__wrap">
                         <img src="img/locations_map.png" class="map__img" alt="">
@@ -359,7 +330,7 @@
                                 Лимитированная коллекция в коллаборации с брендом Нейм
                             </p>
                         </div>
-                        <a href="#" class="btn btn-reset btn--primary">
+                        <a href="https://neim.store/" target="_blank" class="btn btn-reset btn--primary">
                             <span>Хочу мерч!</span>
                         </a>
                     </div>
@@ -367,51 +338,103 @@
                 <div class="swiper merch__swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="img/merch.jpg" alt="">
+                            <img src="img/merch-1-1.jpg" alt="Мерч Неймарк">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/merch.jpg" alt="">
+                            <img src="img/merch-1-2.jpg" alt="Мерч Неймарк">
                         </div>
                         <div class="swiper-slide">
-                            <img src="img/merch.jpg" alt="">
+                            <img src="img/merch-1-3.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-1-4.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-1-5.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-1-6.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-1.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-2.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-3.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-4.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-5.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-6.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-7.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-8.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-9.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-10.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-11.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-12.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-13.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-14.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-15.jpg" alt="Мерч Неймарк">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/merch-16.jpg" alt="Мерч Неймарк">
                         </div>
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
             </section>
             <section class="partners" >
                 <div class="container partners__container">
                     <div class="partners__wrapper show" data-scroll>
                         <h2 class="section-title partners__title">Хотите стать партнёром?</h2>
-                        <form class="form " id="partners-form" method="POST" action="#" name="partners-form">
+                        <form class="form " method="POST" action="#" name="partners-form" id="form" autocomplete="off">
                             <div class="form__body">
                                 <div class="form__group">
-                                    <div class="form__wrap">
-                                        <input class="form__input js-valid" type="text" name="partners-name"
-                                            id="partners-name" placeholder="Имя">
-                                    </div>
+                                    <label class="form__label">
+                                       
+                                        <input class="form__input" type="text" name="partners-name" id="name"  data-validate-field="name" placeholder="Имя">
+                                       
+                                    </label>
                                 </div>
                                 <div class="form__group">
-                                    <div class="form__wrap">
-                                        <input class="form__input js-valid" type="tel" name="partners-phone"
-                                            id="partners-phone" placeholder="Телефон" data-mask="tel">
-                                    </div>
+                                    <label class="form__label">
+                                        <input class="form__input js-valid" type="tel" name="partners-phone" id="partners-phone" placeholder="Телефон" data-mask="tel" data-validate-field="tel" inputmode="number">
+                                    </label>
                                 </div>
                                 <div class="form__group">
-                                    <div class="form__wrap form__wrap--area">
-                                        <textarea class="form__area js-valid" name="partners-massage" id="partners-massage"
-                                            cols="30" rows="5" placeholder="Ваши предложения"></textarea>
-                                    </div>
+                                        <textarea class="form__area" type="text" name="partners-massage" id="partners-massage" cols="30" rows="5" placeholder="Ваши предложения"  data-validate-field="textarea"></textarea>
                                 </div>
                                 <div class="form__group">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox" class="custom-checkbox__field js-valid"
-                                            id="partners-checkbox">
+                                        <input type="checkbox" name="check1" id="checkbox"  class="custom-checkbox__field"  data-validate-field="checkbox">
                                         <span class="custom-checkbox__content"></span>
-                                        <span class="custom-checkbox__text">Согласие на <a href="#">обработку
-                                                персональных данных</a>
+                                        <span class="custom-checkbox__text" >Согласие на <a href="#">обработку персональных данных</a>
                                         </span>
                                     </label>
                                 </div>
@@ -423,6 +446,8 @@
                             <button type="submit" class="btn btn-reset btn--transparent"
                                 value="validate">Отправить</button>
                         </form>
+
+                     
                     </div>
                 </div>
             </section>        
@@ -462,9 +487,10 @@
             </div>
         </footer>
     </div>
-    <script src="js/locomotive-scroll.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/inputmask.min.js"></script>
+    <script src="js/locomotive-scroll/locomotive-scroll.min.js"></script>
+    <script src="js/swiper/swiper-bundle.min.js"></script>
+    <script src="js/inputmask/inputmask.min.js"></script>
+    <script src="js/justvalidate/justvalidate.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
