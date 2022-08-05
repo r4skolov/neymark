@@ -158,27 +158,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   validateForm();
 
-  function preloader() {
-    const hellopreloader = document.querySelector('.loader');
-    const body = document.querySelector('.page__body');
-    function fadeOutno(el) {
-        el.style.opacity = 1;
-        const interhellopreloader = setInterval(function () {
-            el.style.opacity = el.style.opacity - 0.05;
-            if (el.style.opacity <= 0.05) {
-                clearInterval(interhellopreloader);
-                hellopreloader.style.display = "none";
-                body.classList.remove('scroll')
-            }
-        }, 16);
-    }
-    window.onload = function () {
-        setTimeout(function () {
-            fadeOutno(hellopreloader);
-        }, 1000);
-    };
-  }
-  preloader();
+  // function preloader() {
+  //   const hellopreloader = document.querySelector('.loader');
+  //   const body = document.querySelector('.page__body');
+  //   function fadeOutno(el) {
+  //       el.style.opacity = 1;
+  //       const interhellopreloader = setInterval(function () {
+  //           el.style.opacity = el.style.opacity - 0.05;
+  //           if (el.style.opacity <= 0.05) {
+  //               clearInterval(interhellopreloader);
+  //               hellopreloader.style.display = "none";
+  //               body.classList.remove('scroll')
+  //           }
+  //       }, 16);
+  //   }
+  //   window.onload = function () {
+  //       setTimeout(function () {
+  //           fadeOutno(hellopreloader);
+  //       }, 1000);
+  //   };
+  // }
+  // preloader();
 
 
  
@@ -249,5 +249,10 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         
     });
+
+    setTimeout(function () {
+      scroller.update();
+    }, 1000);
+
 
 });
